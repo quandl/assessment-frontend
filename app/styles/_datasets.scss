@@ -1,5 +1,5 @@
 .DataSet {
-  font-size: 12px;
+  font-size: 11px;
   overflow: hidden;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
@@ -8,13 +8,34 @@
     overflow: auto;
   }
 
-  // &::-webkit-scrollbar {
-  //   // display: none;
-  // }
   -ms-overflow-style: -ms-autohiding-scrollbar;
 
   &--sample:hover {
-    overflow-y: auto;
-    overflow-x: scroll;
+    overflow: hidden;
+  }
+
+  &__table {
+    border-collapse: collapse;
+    border-top: 1px solid $strokeGrey;
+    border-bottom: 1px solid $strokeGrey;
+  }
+
+  &__row {
+    border-bottom: 1px solid $strokeGrey;
+    background: #fff;
+    padding: 5px;
+
+    &--header {
+      background: $blueLight;
+    }
+  }
+
+  &__header {
+    font-weight: 800;
+    padding: 7px 10px;
+  }
+
+  &__cell {
+    padding: 7px 10px;
   }
 }

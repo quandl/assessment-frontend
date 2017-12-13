@@ -22,11 +22,20 @@
     float: left;
     background: $blueLight;
     padding: 20px;
+
+    &-title {
+      text-transform: uppercase;
+      color: $textGrey;
+      font-size: 16px;
+      font-weight: normal;
+    }
   }
 
   &__dataset {
     border: 1px solid $strokeGrey;
+    box-shadow: 0 2px 2px 0 rgba(7, 73, 95, 0.1);
     margin-bottom: 26px;
+
     &-header {
       background: #fff;
       font-family: $secondaryFont;
@@ -38,6 +47,13 @@
       text-decoration: none;
       color: $blueUI;
       float: right;
+    }
+
+    &-legend {
+      padding: 7px 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 11px;
     }
   }
 }

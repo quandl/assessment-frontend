@@ -32,7 +32,7 @@
       <h1 class="Publisher__title">{{publisher.title}}</h1>
     </div>
     <div class="Publisher__datasets">
-      <h2>Datasets in this data product</h2>
+      <h2 class="Publisher__datasets-title">Datasets in this data product</h2>
       {{#each products as |product|}}
         <div class="Publisher__dataset">
           <div class="Publisher__dataset-header">
@@ -42,26 +42,26 @@
           <div class="DataSet DataSet--sample">
 
             <table class="DataSet__table">
-              <tr>
-                <th>m_ticker</th>
-                <th>ticker</th>
-                <th>comp_name</th>
-                <th>comp_name_2</th>
-                <th>exchange</th>
-                <th>currency_code</th>
-                <th>per_end_date</th>
-                <th>per_type</th>
-                <th>per_code</th>
-                <th>per_fisc_year</th>
-                <th>per_fisc_qtr</th>
-                <th>per_cal_year</th>
-                <th>per_cal_qtr</th>
-                <th>rev_type</th>
-                <th>rev_type_desc</th>
-                <th>broker_name</th>
-                <th>analyst_name</th>
-                <th>eps_rev_date</th>
-                <th>eps_rev_est</th>
+              <tr class="DataSet__row DataSet__row--header">
+                <th class="DataSet__header">m_ticker</th>
+                <th class="DataSet__header">ticker</th>
+                <th class="DataSet__header">comp_name</th>
+                <th class="DataSet__header">comp_name_2</th>
+                <th class="DataSet__header">exchange</th>
+                <th class="DataSet__header">currency_code</th>
+                <th class="DataSet__header">per_end_date</th>
+                <th class="DataSet__header">per_type</th>
+                <th class="DataSet__header">per_code</th>
+                <th class="DataSet__header">per_fisc_year</th>
+                <th class="DataSet__header">per_fisc_qtr</th>
+                <th class="DataSet__header">per_cal_year</th>
+                <th class="DataSet__header">per_cal_qtr</th>
+                <th class="DataSet__header">rev_type</th>
+                <th class="DataSet__header">rev_type_desc</th>
+                <th class="DataSet__header">broker_name</th>
+                <th class="DataSet__header">analyst_name</th>
+                <th class="DataSet__header">eps_rev_date</th>
+                <th class="DataSet__header">eps_rev_est</th>
               </tr>
               {{#each product.productDataSubset as |data|}}
                 <tr class="DataSet__row">
