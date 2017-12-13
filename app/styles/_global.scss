@@ -1,0 +1,10 @@
+html {
+  font-family: $primaryFont;
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}

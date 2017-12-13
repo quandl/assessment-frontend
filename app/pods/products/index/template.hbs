@@ -1,14 +1,68 @@
+<header class="Header">
+  <button title="menu" class="BurgerButton">
+    <div class="BurgerButton__bar"></div>
+    <div class="BurgerButton__bar"></div>
+    <div class="BurgerButton__bar"></div>
+  </button>
+  <ul class="DataTabs">
+    <li class="DataTabs__list-item">
+      <a href=" # " class="DataTabs__tab ">ALTERNATIVE DATA</a>
+    </li>
+    <li class="DataTabs__list-item">
+      <a href="#" class="DataTabs__tab DataTabs__tab--active">CORE FINANCIAL DATA</a>
+    </li>
+  </ul>
+  <img src='assets/quandl-logo.svg' class="Logo" alt="Quandl" />
+  <ul class="UtilityNav">
+    <li class="UtilityNav__list-item">
+      <a href="#" class="UtilityNav__item ">Docs & Help</a>
+    </li>
+    <li class="UtilityNav__list-item">
+      <a href="#" class="UtilityNav__item">Blog</a>
+    </li>
+    <li class="UtilityNav__list-item">
+      <a href=" # " class="UtilityNav__item ">Sign In</a>
+    </li>
+  </ul>
+</header>
+<main role="main">
+  <section class="Publisher">
+    <div class="Publisher__header">
+      <img src='assets/avatar.png' class="Publisher__avatar" alt="{{publisher.title}}" />
+      <h1 class="Publisher__title">{{publisher.title}}</h1>
+    </div>
+    <div class="Publisher__datasets">
+      <h2>Datasets in this data product</h2>
+    </div>
+  </section>
+</main>
 <h3>Product Page - Index - {{publisher.title}}</h3>
-
+<h2>{{publisher.coverage}}</h2>
 {{#each products as |product|}}
   <h4>{{link-to product.name 'products.show' product.id}}</h4>
 
   <table>
     {{#each product.productDataSubset as |data|}}
       <tr>
+        <td>{{data.m_ticker}}</td>
         <td>{{data.ticker}}</td>
         <td>{{data.comp_name}}</td>
+        <td>{{data.comp_name_2}}</td>
+        <td>{{data.exchange}}</td>
+        <td>{{data.currency_code}}</td>
         <td>{{data.per_end_date}}</td>
+        <td>{{data.per_type}}</td>
+        <td>{{data.per_code}}</td>
+        <td>{{data.per_fisc_year}}</td>
+        <td>{{data.per_fisc_qtr}}</td>
+        <td>{{data.per_cal_year}}</td>
+        <td>{{data.per_cal_qtr}}</td>
+        <td>{{data.rev_type}}</td>
+        <td>{{data.rev_type_desc}}</td>
+        <td>{{data.broker_name}}</td>
+        <td>{{data.analyst_name}}</td>
+        <td>{{data.eps_rev_date}}</td>
+        <td>{{data.eps_rev_est}}</td>
       </tr>
     {{/each}}
   </table>
