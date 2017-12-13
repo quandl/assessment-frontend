@@ -7,7 +7,6 @@ let Product = EmberObject.extend({
   name: null,
   data: [],
   productDataSubset: Ember.computed("data", function() {
-    console.log("this.get('data') ", this.get("data")[0]);
     return this.get("data").slice(0, 7);
   })
 });

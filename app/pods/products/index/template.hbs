@@ -92,37 +92,56 @@
         </div>
       {{/each}}
     </div>
+    <div class="Publisher__info">
+      <div class="Publisher__info-header">Comercial Data</div>
+      <h3 class="Publisher__info-title">Data Overview</h3>
+      <p class="Publisher__info-description">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, dolor amet? Pariatur corporis nam commodi sequi quis
+        perferendis ad, nisi officiis iusto labore vel exercitationem, officia neque dignissimos. Voluptate, vel.
+      </p>
+      <dl class="Publisher__details">
+        <dt class="Publisher__details-title">Delivery Frequency
+          <i class="InfoIcon"></i>
+        </dt>
+        <dd class="Publisher__details-desciption">{{publisher.deliveryFrequency}}</dd>
+      </dl>
+      <dl class="Publisher__details">
+        <dt class="Publisher__details-title">Data Frequency
+          <i class="InfoIcon"></i>
+        </dt>
+        <dd class="Publisher__details-desciption">{{publisher.dataFrequency}}</dd>
+      </dl>
+      <dl class="Publisher__details">
+        <dt class="Publisher__details-title">Reporting Lag
+          <i class="InfoIcon"></i>
+        </dt>
+        <dd class="Publisher__details-desciption">{{publisher.reportingLag}}</dd>
+      </dl>
+      <dl class="Publisher__details">
+        <dt class="Publisher__details-title">History
+          <i class="InfoIcon"></i>
+        </dt>
+        <dd class="Publisher__details-desciption">{{publisher.history}}</dd>
+      </dl>
+      <dl class="Publisher__details">
+        <dt class="Publisher__details-title">Coverage
+          <i class="InfoIcon"></i>
+        </dt>
+        <dd class="Publisher__details-desciption">{{publisher.coverage}}</dd>
+      </dl>
+      <div class="Publisher__api">
+        Tables API
+        <i class="InfoIcon"></i>
+      </div>
+
+      <button class="Publisher__pricing">Pricing</button>
+    </div>
+
   </section>
 </main>
 {{!-- <h2>{{publisher.coverage}}</h2> --}}
 {{!-- {{#each products as |product|}}
   <h4>{{link-to product.name 'products.show' product.id}}</h4>
-
-  <table>
-    {{#each product.productDataSubset as |data|}}
-      <tr>
-        <td>{{data.m_ticker}}</td>
-        <td>{{data.ticker}}</td>
-        <td>{{data.comp_name}}</td>
-        <td>{{data.comp_name_2}}</td>
-        <td>{{data.exchange}}</td>
-        <td>{{data.currency_code}}</td>
-        <td>{{data.per_end_date}}</td>
-        <td>{{data.per_type}}</td>
-        <td>{{data.per_code}}</td>
-        <td>{{data.per_fisc_year}}</td>
-        <td>{{data.per_fisc_qtr}}</td>
-        <td>{{data.per_cal_year}}</td>
-        <td>{{data.per_cal_qtr}}</td>
-        <td>{{data.rev_type}}</td>
-        <td>{{data.rev_type_desc}}</td>
-        <td>{{data.broker_name}}</td>
-        <td>{{data.analyst_name}}</td>
-        <td>{{data.eps_rev_date}}</td>
-        <td>{{data.eps_rev_est}}</td>
-      </tr>
-    {{/each}}
-  </table>
 {{/each}} --}}
 
 {{outlet}}

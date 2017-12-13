@@ -1,4 +1,6 @@
 .Publisher {
+  color: $textBlue;
+
   &__header {
     background: $blue;
     color: #fff;
@@ -21,6 +23,7 @@
     width: calc(100% - 407px);
     float: left;
     background: $blueLight;
+    border-left: 1px solid $strokeGrey;
     padding: 20px;
 
     &-title {
@@ -55,5 +58,84 @@
       text-transform: uppercase;
       font-size: 11px;
     }
+  }
+
+  &__info {
+    float: right;
+    width: 407px;
+    padding: 20px;
+
+    &-header {
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $green;
+      display: inline-block;
+      padding: 4px 7px;
+      border: 2px solid;
+      border-radius: 3px;
+    }
+
+    &-title {
+      color: $textBlue;
+      font-family: $secondaryFont;
+      margin: 18px auto;
+    }
+
+    &-description {
+      margin: 18px auto;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__details {
+    border-bottom: 1px solid $strokeGrey;
+    display: table;
+    width: 100%;
+    margin: 0;
+    padding: 18px 0;
+
+    &:last-child,
+    &:last-of-type {
+      border-bottom: none;
+      margin: 0 0 30px;
+    }
+
+    &-title {
+      display: table-cell;
+      vertical-align: middle;
+      color: $textGrey;
+      text-transform: uppercase;
+    }
+
+    &-desciption {
+      display: table-cell;
+      vertical-align: middle;
+      font-family: $secondaryFont;
+      text-align: right;
+      text-transform: capitalize;
+    }
+  }
+
+  &__api {
+    border: 1px solid $blueBright;
+    border-radius: 2px;
+    padding: 7px 10px;
+    margin: 0 0 30px;
+    .InfoIcon {
+      float: right;
+      margin-right: 20px;
+    }
+  }
+
+  &__pricing {
+    width: 100%;
+    border: none;
+    padding: 7px;
+    margin: 0 0 30px;
+    background: $blueUI;
+    font-family: $secondaryFont;
+    color: #fff;
+    text-align: center;
   }
 }
