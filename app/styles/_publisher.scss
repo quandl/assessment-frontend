@@ -1,0 +1,43 @@
+.Publisher {
+  &__header {
+    background: $blue;
+    color: #fff;
+    padding: 20px;
+  }
+
+  &__avatar {
+    width: 56px;
+    height: 56px;
+    float: left;
+    margin-right: 20px;
+  }
+
+  &__title {
+    margin: 27px 20px;
+    line-height: 0;
+  }
+
+  &__datasets {
+    width: calc(100% - 407px);
+    float: left;
+    background: $blueLight;
+    padding: 20px;
+  }
+
+  &__dataset {
+    border: 1px solid $strokeGrey;
+    margin-bottom: 26px;
+    &-header {
+      background: #fff;
+      font-family: $secondaryFont;
+      font-weight: bold;
+      padding: 22px 18px;
+    }
+
+    &-expand {
+      text-decoration: none;
+      color: $blueUI;
+      float: right;
+    }
+  }
+}

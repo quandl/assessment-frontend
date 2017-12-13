@@ -35,35 +35,60 @@
       <h2>Datasets in this data product</h2>
       {{#each products as |product|}}
         <div class="Publisher__dataset">
-          <div class="Publisher__dataset">{{product.name}}</div>
-          {{#link-to 'products.show' product.id class="Publisher__dataset-expand" }}EXPAND{{/link-to}}
-          <div class="DataSet">
+          <div class="Publisher__dataset-header">
+            {{product.name}}
+            {{#link-to 'products.show' product.id class="Publisher__dataset-expand" }}EXPAND{{/link-to}}
+          </div>
+          <div class="DataSet DataSet--sample">
+
             <table class="DataSet__table">
+              <tr>
+                <th>m_ticker</th>
+                <th>ticker</th>
+                <th>comp_name</th>
+                <th>comp_name_2</th>
+                <th>exchange</th>
+                <th>currency_code</th>
+                <th>per_end_date</th>
+                <th>per_type</th>
+                <th>per_code</th>
+                <th>per_fisc_year</th>
+                <th>per_fisc_qtr</th>
+                <th>per_cal_year</th>
+                <th>per_cal_qtr</th>
+                <th>rev_type</th>
+                <th>rev_type_desc</th>
+                <th>broker_name</th>
+                <th>analyst_name</th>
+                <th>eps_rev_date</th>
+                <th>eps_rev_est</th>
+              </tr>
               {{#each product.productDataSubset as |data|}}
-                <tr>
-                  <td>{{data.m_ticker}}</td>
-                  <td>{{data.ticker}}</td>
-                  <td>{{data.comp_name}}</td>
-                  <td>{{data.comp_name_2}}</td>
-                  <td>{{data.exchange}}</td>
-                  <td>{{data.currency_code}}</td>
-                  <td>{{data.per_end_date}}</td>
-                  <td>{{data.per_type}}</td>
-                  <td>{{data.per_code}}</td>
-                  <td>{{data.per_fisc_year}}</td>
-                  <td>{{data.per_fisc_qtr}}</td>
-                  <td>{{data.per_cal_year}}</td>
-                  <td>{{data.per_cal_qtr}}</td>
-                  <td>{{data.rev_type}}</td>
-                  <td>{{data.rev_type_desc}}</td>
-                  <td>{{data.broker_name}}</td>
-                  <td>{{data.analyst_name}}</td>
-                  <td>{{data.eps_rev_date}}</td>
-                  <td>{{data.eps_rev_est}}</td>
+                <tr class="DataSet__row">
+                  <td class="DataSet__cell">{{data.m_ticker}}</td>
+                  <td class="DataSet__cell">{{data.ticker}}</td>
+                  <td class="DataSet__cell">{{data.comp_name}}</td>
+                  <td class="DataSet__cell">{{data.comp_name_2}}</td>
+                  <td class="DataSet__cell">{{data.exchange}}</td>
+                  <td class="DataSet__cell">{{data.currency_code}}</td>
+                  <td class="DataSet__cell">{{data.per_end_date}}</td>
+                  <td class="DataSet__cell">{{data.per_type}}</td>
+                  <td class="DataSet__cell">{{data.per_code}}</td>
+                  <td class="DataSet__cell">{{data.per_fisc_year}}</td>
+                  <td class="DataSet__cell">{{data.per_fisc_qtr}}</td>
+                  <td class="DataSet__cell">{{data.per_cal_year}}</td>
+                  <td class="DataSet__cell">{{data.per_cal_qtr}}</td>
+                  <td class="DataSet__cell">{{data.rev_type}}</td>
+                  <td class="DataSet__cell">{{data.rev_type_desc}}</td>
+                  <td class="DataSet__cell">{{data.broker_name}}</td>
+                  <td class="DataSet__cell">{{data.analyst_name}}</td>
+                  <td class="DataSet__cell">{{data.eps_rev_date}}</td>
+                  <td class="DataSet__cell">{{data.eps_rev_est}}</td>
                 </tr>
               {{/each}}
             </table>
           </div>
+          <div class="Publisher__dataset-legend">Sample rows</div>
         </div>
       {{/each}}
     </div>

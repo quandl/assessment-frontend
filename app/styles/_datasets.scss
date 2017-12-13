@@ -1,0 +1,20 @@
+.DataSet {
+  font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+
+  &:hover {
+    overflow: auto;
+  }
+
+  // &::-webkit-scrollbar {
+  //   // display: none;
+  // }
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+
+  &--sample:hover {
+    overflow-y: auto;
+    overflow-x: scroll;
+  }
+}
