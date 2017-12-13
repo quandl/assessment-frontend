@@ -33,12 +33,44 @@
     </div>
     <div class="Publisher__datasets">
       <h2>Datasets in this data product</h2>
+      {{#each products as |product|}}
+        <div class="Publisher__dataset">
+          <div class="Publisher__dataset">{{product.name}}</div>
+          {{#link-to 'products.show' product.id class="Publisher__dataset-expand" }}EXPAND{{/link-to}}
+          <div class="DataSet">
+            <table class="DataSet__table">
+              {{#each product.productDataSubset as |data|}}
+                <tr>
+                  <td>{{data.m_ticker}}</td>
+                  <td>{{data.ticker}}</td>
+                  <td>{{data.comp_name}}</td>
+                  <td>{{data.comp_name_2}}</td>
+                  <td>{{data.exchange}}</td>
+                  <td>{{data.currency_code}}</td>
+                  <td>{{data.per_end_date}}</td>
+                  <td>{{data.per_type}}</td>
+                  <td>{{data.per_code}}</td>
+                  <td>{{data.per_fisc_year}}</td>
+                  <td>{{data.per_fisc_qtr}}</td>
+                  <td>{{data.per_cal_year}}</td>
+                  <td>{{data.per_cal_qtr}}</td>
+                  <td>{{data.rev_type}}</td>
+                  <td>{{data.rev_type_desc}}</td>
+                  <td>{{data.broker_name}}</td>
+                  <td>{{data.analyst_name}}</td>
+                  <td>{{data.eps_rev_date}}</td>
+                  <td>{{data.eps_rev_est}}</td>
+                </tr>
+              {{/each}}
+            </table>
+          </div>
+        </div>
+      {{/each}}
     </div>
   </section>
 </main>
-<h3>Product Page - Index - {{publisher.title}}</h3>
-<h2>{{publisher.coverage}}</h2>
-{{#each products as |product|}}
+{{!-- <h2>{{publisher.coverage}}</h2> --}}
+{{!-- {{#each products as |product|}}
   <h4>{{link-to product.name 'products.show' product.id}}</h4>
 
   <table>
@@ -66,6 +98,6 @@
       </tr>
     {{/each}}
   </table>
-{{/each}}
+{{/each}} --}}
 
 {{outlet}}
