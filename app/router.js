@@ -1,5 +1,5 @@
-import EmberRouter from '@ember/routing/router';
-import config from './config/environment';
+import EmberRouter from "@ember/routing/router";
+import config from "./config/environment";
 
 const Router = EmberRouter.extend({
   location: config.locationType,
@@ -7,11 +7,11 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('home', { path: '' });
+  this.route("home", { path: "" });
 
-  this.route('products', function() {
-    this.route('index', { path: '' });
-    this.route('show', { path: ':id' });
+  this.route("products", function() {
+    this.route("index", { path: "" });
+    this.route("show", { path: ":id" });
   });
 });
 
