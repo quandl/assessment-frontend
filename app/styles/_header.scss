@@ -1,0 +1,111 @@
+.Header {
+  position: relative;
+  height: 56px;
+  background: $blueDark;
+  color: #fff;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.BurgerButton {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  width: 56px;
+  height: 56px;
+  float: left;
+  border-right: 1px solid $blue;
+  transition: all 250ms ease-out;
+
+  &:hover {
+    background: darken($blueDark, 2%);
+  }
+
+  &__bar {
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: #fff;
+    left: 15px;
+
+    &:nth-child(1) {
+      top: 19px;
+    }
+
+    &:nth-child(2) {
+      top: 27px;
+    }
+
+    &:nth-child(3) {
+      top: 35px;
+    }
+  }
+}
+
+.DataTabs {
+  float: left;
+  height: 56px;
+
+  &__list-item {
+    float: left;
+    vertical-align: middle;
+  }
+
+  &__tab {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 18px 15px;
+  }
+
+  &__tab--active {
+    background: $blue;
+  }
+}
+
+.Logo {
+  width: 109px;
+  height: 31px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -54.5px;
+  margin-top: -15.5px;
+}
+
+.UtilityNav {
+  float: right;
+  height: 56px;
+  padding: 18px 9px;
+
+  &__list-item {
+    float: left;
+  }
+
+  &__item {
+    display: block;
+    color: #fff;
+    padding: 18px 9px;
+    text-transform: uppercase;
+    transition: all 250ms ease-out;
+
+    &:hover {
+      color: $blueUI;
+      text-decoration: underline;
+    }
+  }
+}

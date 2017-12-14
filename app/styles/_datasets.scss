@@ -1,0 +1,97 @@
+.DataSet {
+  font-size: 11px;
+  overflow: hidden;
+  white-space: nowrap;
+  @include clearfix;
+
+  &--expanded {
+    height: calc(100vh - 148px);
+    overflow: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    // -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+
+  &--sample:hover {
+    overflow: hidden;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 1px solid $strokeGrey;
+    border-bottom: 1px solid $strokeGrey;
+  }
+
+  &__row {
+    border-bottom: 1px solid $strokeGrey;
+    background: #fff;
+    padding: 5px;
+
+    &--header {
+      background: $blueLight;
+    }
+
+    &--border {
+      border: 1px dotted $strokeGrey;
+    }
+  }
+
+  &__header {
+    text-align: left;
+    font-weight: 800;
+    padding: 7px 10px;
+
+    &--border {
+      border: 1px dotted $strokeGrey;
+    }
+  }
+
+  &__cell {
+    padding: 7px 10px;
+
+    &--border {
+      padding: 2px 5px;
+      border: 1px dotted $strokeGrey;
+    }
+  }
+
+  &__legend {
+    background: $blueLight;
+    padding: 7px 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 11px;
+
+    &--expanded {
+      padding: 0 10px;
+      height: 28px;
+      line-height: 25px;
+    }
+  }
+
+  &__toggles {
+    margin: 0;
+    padding: 0 20px;
+    list-style: none;
+    display: flex;
+  }
+
+  &__toggle {
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 14px;
+
+    color: $textGrey;
+    padding: 0 20px;
+    height: 52px;
+    line-height: 52px;
+
+    &--active {
+      font-weight: bold;
+      color: $blueUI;
+      border-bottom: 3px solid;
+    }
+  }
+}

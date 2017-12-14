@@ -1,0 +1,160 @@
+.Publisher {
+  color: $textBlue;
+
+  &__header {
+    background: $blue;
+    color: #fff;
+    padding: 20px;
+
+    &--product {
+      padding: 0 20px;
+      height: 60px;
+      font-size: 16px;
+    }
+  }
+
+  &__avatar {
+    width: 56px;
+    height: 56px;
+    float: left;
+    margin-right: 20px;
+
+    &--product {
+      width: 40px;
+      height: 40px;
+      margin: auto 10px;
+    }
+  }
+
+  &__title {
+    font-family: $secondaryFont;
+    margin: 27px 20px;
+    line-height: 0;
+
+    &--product {
+      margin: auto;
+    }
+  }
+
+  &__datasets {
+    width: calc(100% - 407px);
+    float: left;
+    background: $blueLight;
+    border-left: 1px solid $strokeGrey;
+    padding: 20px;
+
+    &-title {
+      text-transform: uppercase;
+      color: $textGrey;
+      font-size: 16px;
+      font-weight: normal;
+    }
+  }
+
+  &__dataset {
+    border: 1px solid $strokeGrey;
+    box-shadow: 0 2px 2px 0 rgba(7, 73, 95, 0.1);
+    margin-bottom: 26px;
+
+    &-header {
+      background: #fff;
+      font-family: $secondaryFont;
+      font-weight: bold;
+      padding: 22px 18px;
+    }
+
+    &-expand {
+      text-decoration: none;
+      color: $blueUI;
+      float: right;
+      transition: all 250ms ease-out;
+
+      &:hover {
+        color: darken($blueUI, 10%);
+        text-decoration: underline;
+      }
+    }
+
+    &-legend {
+      padding: 7px 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+  }
+
+  &__info {
+    float: right;
+    width: 407px;
+    padding: 20px;
+
+    &-header {
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $green;
+      display: inline-block;
+      padding: 4px 7px;
+      border: 2px solid;
+      border-radius: 3px;
+    }
+
+    &-title {
+      color: $textBlue;
+      font-family: $secondaryFont;
+      margin: 18px auto;
+    }
+
+    &-description {
+      margin: 18px auto;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__details {
+    border-bottom: 1px solid $strokeGrey;
+    display: table;
+    width: 100%;
+    margin: 0;
+    padding: 18px 0;
+
+    &:last-child,
+    &:last-of-type {
+      border-bottom: none;
+      margin: 0 0 30px;
+    }
+
+    &-title {
+      display: table-cell;
+      vertical-align: middle;
+      color: $textGrey;
+      text-transform: uppercase;
+    }
+
+    &-desciption {
+      display: table-cell;
+      vertical-align: middle;
+      font-family: $secondaryFont;
+      text-align: right;
+      text-transform: capitalize;
+    }
+  }
+
+  &__api {
+    border: 1px solid $blueBright;
+    border-radius: 2px;
+    padding: 7px 10px;
+    margin: 0 0 30px;
+
+    .InfoIcon {
+      float: right;
+      margin-right: 20px;
+    }
+  }
+
+  &__pricing {
+    width: 100%;
+    display: block;
+    margin: 0 0 30px;
+  }
+}

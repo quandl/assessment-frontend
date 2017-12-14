@@ -1,6 +1,11 @@
-import Ember from 'ember';
+import Ember from "ember";
 
 export default Ember.Controller.extend({
-  publisher: Ember.computed.alias('model.publisher'),
-  products: Ember.computed.alias('model.products')
+  publisher: Ember.computed.alias("model.publisher"),
+  products: Ember.computed.alias("model.products"),
+  actions: {
+    logger(value) {
+      console.log(`${value} clicked`);
+    }
+  }
 });
