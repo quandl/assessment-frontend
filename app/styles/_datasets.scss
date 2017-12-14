@@ -2,14 +2,14 @@
   font-size: 11px;
   overflow: hidden;
   white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
   @include clearfix;
 
   &--expanded {
+    height: calc(100vh - 148px);
     overflow: auto;
     scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
     // -ms-overflow-style: -ms-autohiding-scrollbar;
-    height: calc(100vh - 148px);
   }
 
   &--sample:hover {
