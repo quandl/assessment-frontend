@@ -5,6 +5,12 @@
     background: $blue;
     color: #fff;
     padding: 20px;
+
+    &--product {
+      padding: 0 20px;
+      height: 60px;
+      font-size: 16px;
+    }
   }
 
   &__avatar {
@@ -12,11 +18,22 @@
     height: 56px;
     float: left;
     margin-right: 20px;
+
+    &--product {
+      width: 40px;
+      height: 40px;
+      margin: auto 10px;
+    }
   }
 
   &__title {
+    font-family: $secondaryFont;
     margin: 27px 20px;
     line-height: 0;
+
+    &--product {
+      margin: auto;
+    }
   }
 
   &__datasets {
@@ -50,6 +67,12 @@
       text-decoration: none;
       color: $blueUI;
       float: right;
+      transition: all 250ms ease-out;
+
+      &:hover {
+        color: darken($blueUI, 10%);
+        text-decoration: underline;
+      }
     }
 
     &-legend {
@@ -122,6 +145,7 @@
     border-radius: 2px;
     padding: 7px 10px;
     margin: 0 0 30px;
+
     .InfoIcon {
       float: right;
       margin-right: 20px;
@@ -130,12 +154,7 @@
 
   &__pricing {
     width: 100%;
-    border: none;
-    padding: 7px;
+    display: block;
     margin: 0 0 30px;
-    background: $blueUI;
-    font-family: $secondaryFont;
-    color: #fff;
-    text-align: center;
   }
 }

@@ -9,6 +9,42 @@ html {
   box-sizing: inherit;
 }
 
+.Button {
+  border: none;
+  padding: 7px 11px;
+  background: $blueUI;
+  font-family: $secondaryFont;
+  color: #fff;
+  border: 1px solid;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 250ms ease-out;
+
+  &:hover {
+    background: darken($blueUI, 10%);
+  }
+
+  &--inverse {
+    background: #fff;
+    color: $blueUI;
+    border-radius: 3px;
+
+    &:hover {
+      color: #fff;
+      background: $blueUI;
+    }
+  }
+
+  &--download {
+    position: relative;
+
+    .fa {
+      margin: auto 5px auto 10px;
+      opacity: 0.6;
+    }
+  }
+}
+
 .InfoIcon {
   color: $blueUI;
   position: relative;

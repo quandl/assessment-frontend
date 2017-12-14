@@ -12,7 +12,7 @@
       <a href="# " class="DataTabs__tab DataTabs__tab--active " {{action 'logger' 'CORE FINANCIAL DATA tab'}}>CORE FINANCIAL DATA</a>
     </li>
   </ul>
-  <img src='assets/quandl-logo.svg' class="Logo " alt="Quandl " />
+  <img src='/assets/quandl-logo.svg' class="Logo " alt="Quandl " />
   <ul class="UtilityNav ">
     <li class="UtilityNav__list-item ">
       <a href="# " class="UtilityNav__item " {{action 'logger' 'Docs & Help'}}>Docs & Help</a>
@@ -26,12 +26,12 @@
   </ul>
 </header>
 <main role="main ">
-  <section class="Publisher ">
-    <div class="Publisher__header ">
-      <img src='assets/avatar.png' class="Publisher__avatar " alt=" {{publisher.title}} " />
+  <section class="Publisher">
+    <div class="Publisher__header">
+      <img src='/assets/avatar.png' class="Publisher__avatar " alt=" {{publisher.title}} " />
       <h1 class="Publisher__title ">{{publisher.title}}</h1>
     </div>
-    <div class="Publisher__datasets ">
+    <div class="Publisher__datasets">
       <h2 class="Publisher__datasets-title ">Datasets in this data product</h2>
       {{#each products as |product|}}
         <div class="Publisher__dataset ">
@@ -40,7 +40,6 @@
             {{#link-to 'products.show' product.id class="Publisher__dataset-expand" }}EXPAND{{/link-to}}
           </div>
           <div class="DataSet DataSet--sample ">
-
             <table class="DataSet__table ">
               <tr class="DataSet__row DataSet__row--header ">
                 <th class="DataSet__header ">m_ticker</th>
@@ -88,11 +87,11 @@
               {{/each}}
             </table>
           </div>
-          <div class="Publisher__dataset-legend ">Sample rows</div>
+          <div class="DataSet__legend ">Sample rows</div>
         </div>
       {{/each}}
     </div>
-    <div class="Publisher__info ">
+    <div class="Publisher__info">
       <div class="Publisher__info-header ">Comercial Data</div>
       <h3 class="Publisher__info-title ">Data Overview</h3>
       <p class="Publisher__info-description ">
@@ -133,15 +132,9 @@
         Tables API
         <i class="InfoIcon "></i>
       </div>
-
-      <button class="Publisher__pricing" {{action 'logger' 'pricing button'}}>Pricing</button>
+      <button class="Button Publisher__pricing" {{action 'logger' 'pricing button'}}>Pricing</button>
     </div>
 
   </section>
 </main>
-{{!-- <h2>{{publisher.coverage}}</h2> --}}
-{{!-- {{#each products as |product|}}
-  <h4>{{link-to product.name 'products.show' product.id}}</h4>
-{{/each}} --}}
-
 {{outlet}}

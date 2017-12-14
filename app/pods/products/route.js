@@ -11,6 +11,11 @@ let Product = EmberObject.extend({
   })
 });
 
+const indexedData = sampleData.map((o, index) => {
+  const num = index + 1;
+  return Ember.assign({ index: num }, o);
+});
+
 export default Route.extend({
   model() {
     return EmberObject.create({
@@ -18,12 +23,12 @@ export default Route.extend({
         Product.create({
           id: "abc",
           name: "Product ABC",
-          data: sampleData.map(o => EmberObject.create(o))
+          data: indexedData.map(o => EmberObject.create(o))
         }),
         Product.create({
           id: "123",
           name: "Product 123",
-          data: sampleData.map(o => EmberObject.create(o))
+          data: indexedData.map(o => EmberObject.create(o))
         })
       ],
       publisher: EmberObject.create({

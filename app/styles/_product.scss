@@ -1,0 +1,47 @@
+.Product {
+  &__back {
+    height: 60px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    max-width: 50%;
+
+    .fa {
+      position: relative;
+      left: 0;
+      transition: all 250ms ease-out;
+    }
+
+    &:visited {
+      color: #fff;
+    }
+
+    &:hover {
+      .fa {
+        left: -5px;
+      }
+    }
+  }
+
+  &__header {
+    height: 60px;
+    border-bottom: 1px solid $strokeGrey;
+    display: flex;
+    -ms-flex-align: center;
+    @include clearfix;
+  }
+
+  &__name {
+    margin: auto 20px;
+    font-family: $secondaryFont;
+  }
+
+  &__utilities {
+    margin: auto 10px auto auto;
+
+    .Button {
+      margin: auto 10px;
+    }
+  }
+}

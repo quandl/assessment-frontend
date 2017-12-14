@@ -29,6 +29,11 @@
   height: 56px;
   float: left;
   border-right: 1px solid $blue;
+  transition: all 250ms ease-out;
+
+  &:hover {
+    background: darken($blueDark, 2%);
+  }
 
   &__bar {
     position: absolute;
@@ -96,5 +101,11 @@
     color: #fff;
     padding: 18px 9px;
     text-transform: uppercase;
+    transition: all 250ms ease-out;
+
+    &:hover {
+      color: $blueUI;
+      text-decoration: underline;
+    }
   }
 }

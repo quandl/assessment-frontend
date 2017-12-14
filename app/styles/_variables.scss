@@ -11,3 +11,15 @@ $green: #00b985;
 
 $primaryFont: "Source Sans Pro", sans-serif;
 $secondaryFont: "Quantico", sans-serif;
+
+@mixin clearfix() {
+  &:after,
+  &:before {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
