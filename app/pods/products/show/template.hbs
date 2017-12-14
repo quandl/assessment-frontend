@@ -1,17 +1,78 @@
-<h3>Sub-Product Page</h3>
+<div class="Publisher__header Publisher__header--product">
+  {{#link-to 'products' class="Product__back" }}
+    <i class="fa fa-chevron-left"></i>
+    <img src='/assets/avatar.png' class="Publisher__avatar Publisher__avatar--product" alt=" {{publisher.title}} " />
+    <div class="Publisher__title Publisher__title--product">{{publisher.title}}</div>
+  {{/link-to}}
+</div>
 
-{{link-to 'Product page' 'products'}}
-
-<h4>{{product.name}}</h4>
-
-<table>
-  {{#each productData as |data|}}
-    <tr>
-      <td>{{data.ticker}}</td>
-      <td>{{data.comp_name}}</td>
-      <td>{{data.per_end_date}}</td>
+<div class="Product__header">
+  <h1 class="Product__name">{{product.name}}</h1>
+  <div class="Product__utilities">
+    <button class="Button Button--inverse" {{action 'logger' 'Coverage'}}>Coverage</button>
+    <button class="Button Button--download" {{action 'logger' 'Download'}}>Download
+      <i class="fa fa-caret-down"></i>
+    </button>
+  </div>
+</div>
+<div class="DataSet DataSet--expanded">
+  <ul class="DataSet__toggles">
+    <li class="DataSet__toggle-item">
+      <a href="#" class="DataSet__toggle DataSet__toggle--active" {{action 'logger' 'Data Sample tab'}}>Data Sample</a>
+    </li>
+    <li class="DataSet__toggle-item">
+      <a href="#" class="DataSet__toggle" {{action 'logger' 'Coverage tab'}}>Coverage</a>
+    </li>
+  </ul>
+  <table class="DataSet__table DataSet__table--border">
+    <tr class="DataSet__row DataSet__row--header DataSet__row--border">
+      <th class="DataSet__header DataSet__header--border">&nbsp;</th>
+      <th class="DataSet__header DataSet__header--border">m_ticker</th>
+      <th class="DataSet__header DataSet__header--border">ticker</th>
+      <th class="DataSet__header DataSet__header--border">comp_name</th>
+      <th class="DataSet__header DataSet__header--border">comp_name_2</th>
+      <th class="DataSet__header DataSet__header--border">exchange</th>
+      <th class="DataSet__header DataSet__header--border">currency_code</th>
+      <th class="DataSet__header DataSet__header--border">per_end_date</th>
+      <th class="DataSet__header DataSet__header--border">per_type</th>
+      <th class="DataSet__header DataSet__header--border">per_code</th>
+      <th class="DataSet__header DataSet__header--border">per_fisc_year</th>
+      <th class="DataSet__header DataSet__header--border">per_fisc_qtr</th>
+      <th class="DataSet__header DataSet__header--border">per_cal_year</th>
+      <th class="DataSet__header DataSet__header--border">per_cal_qtr</th>
+      <th class="DataSet__header DataSet__header--border">rev_type</th>
+      <th class="DataSet__header DataSet__header--border">rev_type_desc</th>
+      <th class="DataSet__header DataSet__header--border">broker_name</th>
+      <th class="DataSet__header DataSet__header--border">analyst_name</th>
+      <th class="DataSet__header DataSet__header--border">eps_rev_date</th>
+      <th class="DataSet__header DataSet__header--border">eps_rev_est</th>
     </tr>
-  {{/each}}
-</table>
+    {{#each-in productData as |key data|}}
+      <tr class="DataSet__row DataSet__row--border">
+        <td class="DataSet__cell DataSet__cell--border">{{data.index}}</td>
+        <td class="DataSet__cell DataSet__cell--border">{{data.m_ticker}}</td>
+        <td class="DataSet__cell DataSet__cell--border">{{data.ticker}}</td>
+        <td class="DataSet__cell DataSet__cell--border">{{data.comp_name}}</td>
+        <td class="DataSet__cell DataSet__cell--border">{{data.comp_name_2}}</td>
+        <td class="DataSet__cell DataSet__cell--border">{{data.exchange}}</td>
+        <td class="DataSet__cell DataSet__cell--border">{{data.currency_code}}</td>
+        <td class="DataSet__cell DataSet__cell--border">{{data.per_end_date}}</td>
+        <td class="DataSet__cell DataSet__cell--border">{{data.per_type}}</td>
+        <td class="DataSet__cell DataSet__cell--border">{{data.per_code}}</td>
+        <td class="DataSet__cell DataSet__cell--border">{{data.per_fisc_year}}</td>
+        <td class="DataSet__cell DataSet__cell--border">{{data.per_fisc_qtr}}</td>
+        <td class="DataSet__cell DataSet__cell--border">{{data.per_cal_year}}</td>
+        <td class="DataSet__cell DataSet__cell--border">{{data.per_cal_qtr}}</td>
+        <td class="DataSet__cell DataSet__cell--border">{{data.rev_type}}</td>
+        <td class="DataSet__cell DataSet__cell--border">{{data.rev_type_desc}}</td>
+        <td class="DataSet__cell DataSet__cell--border">{{data.broker_name}}</td>
+        <td class="DataSet__cell DataSet__cell--border">{{data.analyst_name}}</td>
+        <td class="DataSet__cell DataSet__cell--border">{{data.eps_rev_date}}</td>
+        <td class="DataSet__cell DataSet__cell--border">{{data.eps_rev_est}}</td>
+      </tr>
+    {{/each-in}}
+  </table>
+</div>
+<div class="DataSet__legend DataSet__legend--expanded">Sample rows</div>
 
 {{outlet}}
