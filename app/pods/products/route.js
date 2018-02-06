@@ -18,6 +18,7 @@ export default Route.extend({
         Product.create({
           id: 'abc',
           name: 'Product ABC',
+          // TODO: See if there is a better way to accomplish this, similar to .keys?
           categories: [
             "m_ticker",
             "ticker",
