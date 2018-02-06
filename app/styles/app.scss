@@ -6,6 +6,7 @@ a {
   font-size: .6em;
   font-weight: 600;
   line-height: 20px;
+  padding: 10px;
 }
 
 .nav-wrapper {
@@ -64,4 +65,22 @@ nav {
 .links-bar {
   background-color: #133347;
   height: 40px;
+}
+
+.logo {
+  height: 25px;
+  padding-top: 8px;
+  padding-right: 4%;
+  padding-left: 4%;
+}
+
+.avatar {
+  float: left;
+  height: 40px;
+  margin: 8px;
+}
+
+.publisher {
+  float: left;
+  color: white;
 }
