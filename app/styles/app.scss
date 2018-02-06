@@ -3,7 +3,9 @@
 a {
   text-decoration: none;
   color: white;
-  font-size: .75em;
+  font-size: .6em;
+  font-weight: 600;
+  line-height: 20px;
 }
 
 .nav-wrapper {
@@ -20,14 +22,10 @@ nav {
   height: 100px;
 }
 .hamburger{
-  position: absolute;
+  float: left;
   display: inline-block;
-  margin: 0;
   padding: 10px;
-  padding-bottom: 8px;
-  padding-top: 8px;
   background-color: #133347;
-  left: 0;
 }
 .slice {
   width: 20px;
@@ -42,24 +40,28 @@ nav {
 
 .nav {
   display: inline-block;
-  position: absolute;
-  padding: 0;
-  margin: 0;
 }
 
 .left-nav {
-  left: 45px;
+  float: left;
+  height: 40px;
 }
 
 .right-nav {
-  right: 0;
+  float: right;
+  height: 40px;
 }
 
 .nav-item {
   background-color: #133347;
   display: inline-block;
-  height: 26px;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
+}
+
+.nav-item:hover {
+  background-color: #004861;
+}
+
+.links-bar {
+  background-color: #133347;
+  height: 40px;
 }
