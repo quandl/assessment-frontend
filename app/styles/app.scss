@@ -1,12 +1,19 @@
 // Style files in the pods folder are automatically loaded in.
 @import 'pod-styles';
+body {
+  font-family: 'Source Sans Pro';
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Quantico";
+}
+
 a {
   text-decoration: none;
-  color: white;
-  font-size: .6em;
-  font-weight: 600;
-  line-height: 20px;
-  padding: 10px;
+}
+
+td {
+  font-size: .55em;
 }
 
 .nav-wrapper {
@@ -56,6 +63,11 @@ nav {
 .nav-item {
   background-color: #133347;
   display: inline-block;
+  color: white;
+  font-size: .6em;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 10px;
 }
 
 .nav-item:hover {
