@@ -1,16 +1,33 @@
 // Style files in the pods folder are automatically loaded in.
 @import 'pod-styles';
-nav {
+a {
+  text-decoration: none;
+  color: white;
+  font-size: .75em;
+}
+
+.nav-wrapper {
   position: relative;
+  height: 100px;
+}
+
+nav {
+  position: absolute;
   background-color: #004861;
+  text-align: center;
+  width: 80%;
+  left: 10%;
+  height: 100px;
 }
 .hamburger{
+  position: absolute;
   display: inline-block;
   margin: 0;
   padding: 10px;
   padding-bottom: 8px;
   padding-top: 8px;
   background-color: #133347;
+  left: 0;
 }
 .slice {
   width: 20px;
@@ -21,4 +38,28 @@ nav {
 
 .middle {
   height: 2px;
+}
+
+.nav {
+  display: inline-block;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+}
+
+.left-nav {
+  left: 45px;
+}
+
+.right-nav {
+  right: 0;
+}
+
+.nav-item {
+  background-color: #133347;
+  display: inline-block;
+  height: 26px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
