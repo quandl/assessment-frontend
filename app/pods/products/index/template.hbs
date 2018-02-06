@@ -2,8 +2,10 @@
 
 {{#each products as |product|}}
   <h4>{{link-to product.name 'products.show' product.id}}</h4>
-
   <table>
+    {{#each product.categories as |category|}}
+      <td>{{category}}</td>
+    {{/each}}
     {{#each product.productDataSubset as |data|}}
       <tr>
         <td>{{data.ticker}}</td>

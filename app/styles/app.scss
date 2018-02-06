@@ -1,2 +1,24 @@
 // Style files in the pods folder are automatically loaded in.
 @import 'pod-styles';
+nav {
+  position: relative;
+  background-color: #004861;
+}
+.hamburger{
+  display: inline-block;
+  margin: 0;
+  padding: 10px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  background-color: #133347;
+}
+.slice {
+  width: 20px;
+  height: 1px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+.middle {
+  height: 2px;
+}
