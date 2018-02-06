@@ -1,3 +1,4 @@
+<!-- TODO: put nav in it's own component -->
 <div class="nav-wrapper">
   <nav>
     <div class="hamburger">
@@ -25,16 +26,15 @@
 
 
 {{#each products as |product|}}
+  <!-- TODO: Store this in it's own component -->
   <h4>{{link-to product.name 'products.show' product.id}}</h4>
   <table>
-    {{#each product.categories as |category|}}
+    {{#each product.categoriesSubset as |category|}}
       <td>{{category}}</td>
     {{/each}}
     {{#each product.productDataSubset as |data|}}
       <tr>
-        <td>{{data.ticker}}</td>
-        <td>{{data.comp_name}}</td>
-        <td>{{data.per_end_date}}</td>
+        <td>{{product.productDataSubsetSample}}</td>
       </tr>
     {{/each}}
   </table>

@@ -1,5 +1,6 @@
 // Style files in the pods folder are automatically loaded in.
 @import 'pod-styles';
+// TODO: Learn how to split css files in ember
 body {
   font-family: 'Source Sans Pro';
 }
@@ -29,12 +30,14 @@ nav {
   left: 10%;
   height: 100px;
 }
+
 .hamburger{
   float: left;
   display: inline-block;
   padding: 10px;
   background-color: #133347;
 }
+
 .slice {
   width: 20px;
   height: 1px;

@@ -7,7 +7,14 @@ let Product = EmberObject.extend({
   name: null,
   data: [],
   productDataSubset: Ember.computed('data', function() {
-    return this.get('data').slice(0, 7);
+    return this.get('data').slice(0, 10);
+  }),
+  categories: Ember.computed(function() {
+    return Object.keys(this.data[0]);
+  }),
+  categoriesSubset: Ember.computed(function() {
+    var dataSubset = this.get('data')[0];
+    return Object.keys(dataSubset).slice(0, 10);
   })
 })
 
@@ -18,58 +25,11 @@ export default Route.extend({
         Product.create({
           id: 'abc',
           name: 'Product ABC',
-          // TODO: See if there is a better way to accomplish this, similar to .keys?
-          categories: [
-            "m_ticker",
-            "ticker",
-            "comp_name",
-            "comp_name_2",
-            "exchange",
-            "currency_code",
-            "per_end_date",
-            "per_type",
-            "per_code",
-            "per_fisc_year",
-            "per_fisc_qtr",
-            "per_cal_year",
-            "per_cal_qtr",
-            "rev_type",
-            "rev_type_desc",
-            "broker_name",
-            "analyst_name",
-            "eps_rev_date",
-            "eps_rev_est",
-            "eps_rev_date_prev",
-            "eps_rev_est_prev"
-          ],
           data: sampleData.map(o => EmberObject.create(o))
         }),
         Product.create({
           id: '123',
           name: 'Product 123',
-          categories: [
-            "m_ticker",
-            "ticker",
-            "comp_name",
-            "comp_name_2",
-            "exchange",
-            "currency_code",
-            "per_end_date",
-            "per_type",
-            "per_code",
-            "per_fisc_year",
-            "per_fisc_qtr",
-            "per_cal_year",
-            "per_cal_qtr",
-            "rev_type",
-            "rev_type_desc",
-            "broker_name",
-            "analyst_name",
-            "eps_rev_date",
-            "eps_rev_est",
-            "eps_rev_date_prev",
-            "eps_rev_est_prev"
-          ],
           data: sampleData.map(o => EmberObject.create(o))
         })
       ],
