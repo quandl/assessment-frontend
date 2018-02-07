@@ -5,6 +5,7 @@
 /// General styling
 body {
   font-family: 'Source Sans Pro';
+  background-color: #f9f9fb;
 }
 
 h1, h2, h3, h4, h5 {
@@ -124,6 +125,7 @@ td:first-child {
   border-right: solid;
   border-width: .1px;
   border-color: #d2d7dd;
+  padding-right: 0.9%;
 }
 
 .publisher-data-header {
@@ -194,8 +196,9 @@ td:first-child {
   width: 28%;
   margin: 0;
   padding: 0;
-  margin-right: 6%;
+  margin-right: 5%;
   background-color: #ffffff;
+  padding-left: 1%;
 }
 
 .tab-btn {
@@ -243,4 +246,41 @@ td:first-child {
   margin: 0;
   float: right;
   font-size: .7em;
+  padding-right: 5px;
+}
+
+.tables-api-bar {
+  display: inline-block;
+  border: solid;
+  border-width: 1px;
+  border-color: #0096b9;
+  margin-top: 24px;
+  width: 80%;
+  margin-left: 8%;
+}
+
+.i-icon-api {
+  float: right;
+  padding: 5px;
+}
+
+.tables-api-info {
+  padding-left: 4px;
+  font-size: .8em;
+  color: #000;
+}
+
+.pricing-bar {
+  display: inline-block;
+  text-align: center;
+  width: 80%;
+  margin-left: 8%;
+  background-color: #0096b9;
+  margin-top: 15px;
+}
+
+.pricing-header {
+  margin: 0;
+  padding: 5px;
+  color: #fff;
 }
