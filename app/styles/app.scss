@@ -29,9 +29,9 @@ nav {
   position: absolute;
   background-color: #004861;
   text-align: center;
-  width: 80%;
-  left: 10%;
-  height: 100px;
+  width: 90%;
+  left: 5%;
+  height: 110px;
 }
 
 .hamburger{
@@ -88,33 +88,41 @@ nav {
 .logo {
   height: 25px;
   padding-top: 8px;
-  padding-right: 4%;
+  padding-right: 8%;
   padding-left: 4%;
 }
 
 .avatar {
   float: left;
-  height: 40px;
-  margin: 8px;
+  height: 45px;
+  margin: 12px;
 }
 
 .publisher {
   float: left;
   color: white;
+  line-height: 24px;
+  font-size: 1.5em;
 }
 
 // For the data display windows, under the nav-bar
+table {
+  width: 100%;
+}
 .data-display {
   display: inline-block;
-  margin-left: 10%;
+  margin-left: 5%;
   background-color: #f5fafd;
-  width: 60%;
+  width: 65%;
+  border-right: solid;
+  border-width: .1px;
+  border-color: #d2d7dd;
 }
 
 .publisher-data-header {
   margin: 0;
   margin-left: 15px;
-  margin-top: 20px;
+  margin-top: 35px;
   color: #9aa9b3;
   font-weight: 100;
 }
@@ -130,7 +138,7 @@ nav {
 
 
 .data-display-title {
-  padding: 10px;
+  padding: 15px;
   background-color: #fff;
   border: solid;
   border-width: .1px;
@@ -146,4 +154,31 @@ nav {
   float: right;
   margin: 0;
   line-height: 23px;
+  margin-right: 15px;
+}
+
+.data-category-row {
+  border-bottom: solid;
+  border-width: .1px;
+  border-color: #d2d7dd;
+}
+
+.data-category {
+  font-weight: 700;
+  padding: 10px;
+  width: 15%;
+}
+
+.data-row {
+  background-color: #fff;
+  border-bottom: solid;
+  border-width: .1px;
+  border-color: #d2d7dd;
+}
+
+.data-field {
+  padding: 10px;
+  width: 15%;
+  padding-top: 1px;
+  padding-bottom: 1px;
 }

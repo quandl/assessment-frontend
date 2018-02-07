@@ -36,23 +36,27 @@
       <div class="data-display-table">
         <table>
           <!-- Displays the categories -->
-          <tr>
-            {{#each product.categoriesSubset as |category|}}
-              <td>{{category}}</td>
-            {{/each}}
-          </tr>
+          <div class="data-category-row">
+            <tr>
+              {{#each product.categoriesSubset as |category|}}
+                <td class="data-category">{{category}}</td>
+              {{/each}}
+            </tr>
+          </div>
 
           <!-- Displays the rows of data, as collected in route.js -->
           <!-- TODO: Find a way to do this with a component method -->
-            {{#each product.productDataSubsetEntries as |product|}}
-              {{#each product as |row|}}
+          {{#each product.productDataSubsetEntries as |product|}}
+            {{#each product as |row|}}
+              <div class="data-row">
                 <tr>
                   {{#each row as |rowData|}}
-                    <td>{{rowData}}</td>
+                    <td class="data-field">{{rowData}}</td>
                   {{/each}}
                 </tr>
-              {{/each}}
+              </div>
             {{/each}}
+          {{/each}}
         </table>
       </div>
       <div class="data-display-footer">
