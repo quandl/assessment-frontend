@@ -47,8 +47,8 @@ export default Route.extend({
       ],
       publisher: EmberObject.create({
         title: 'XYZ Corp',
-        deliveryFrequency: 'daily',
-        dataFrequency: 'weekly',
+        deliveryFrequency: 'Daily',
+        dataFrequency: 'Weekly',
         reportingLag: '12 hours',
         history: '2005-11-01',
         coverage: '5000+ companies, 59 indicators'

@@ -24,30 +24,73 @@
   </nav>
 </div>
 
+<!-- TODO: Store this in it's own component -->
+<div class="data-display">
+  <h5>Datasets for {{publisher.title}}</h5>
+  {{#each products as |product|}}
+    <div class="data-display-title">
+      <h5 class="data-display-header">{{link-to product.name 'products.show' product.id}}</h5>
+      <h5 class="data-display-header">{{link-to 'EXPAND' 'products.show' product.id}}</h5>
+    </div>
+    <div class="data-display-table">
+      <table>
+        <!-- Displays the categories -->
+        <tr>
+          {{#each product.categoriesSubset as |category|}}
+            <td>{{category}}</td>
+          {{/each}}
+        </tr>
 
-{{#each products as |product|}}
-  <!-- TODO: Store this in it's own component -->
-  <h4>{{link-to product.name 'products.show' product.id}}</h4>
-  <table>
-    <!-- Displays the categories -->
-    <tr>
-      {{#each product.categoriesSubset as |category|}}
-        <td>{{category}}</td>
-      {{/each}}
-    </tr>
-
-    <!-- Displays the rows of data, as collected in route.js -->
-    <!-- TODO: Find a way to do this with a component method -->
-      {{#each product.productDataSubsetEntries as |product|}}
-        {{#each product as |row|}}
-          <tr>
-            {{#each row as |rowData|}}
-              <td>{{rowData}}</td>
+        <!-- Displays the rows of data, as collected in route.js -->
+        <!-- TODO: Find a way to do this with a component method -->
+          {{#each product.productDataSubsetEntries as |product|}}
+            {{#each product as |row|}}
+              <tr>
+                {{#each row as |rowData|}}
+                  <td>{{rowData}}</td>
+                {{/each}}
+              </tr>
             {{/each}}
-          </tr>
-        {{/each}}
-      {{/each}}
-  </table>
-{{/each}}
+          {{/each}}
+      </table>
+    </div>
+    <div class="data-display-footer">
+      <p>SAMPLE ROWS</p>
+    </div>
+  {{/each}}
+</div>
+
+<!-- TODO: Make this into it's own component-->
+<div class="data-overview">
+  <div class="btn tab-btn">COMMERCIAL DATA</div>
+  <h5 class="data-overview-header">DATA OVERVIEW</h5>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
+  <div class="data-bullets">
+    <a href="#" class="delivery-frequency-info">DELIVERY FREQUENCY</a>
+    <h5 class="delivery-frequency-bullet">{{publisher.deliveryFrequency}}</h5>
+
+    <a href="#" class="data-frequency-info">DATA FREQUENCY</a>
+    <h5 class="data-frequency-bullet">{{publisher.dataFrequency}}</h5>
+
+    <a href="#" class="reporting-lag-info">REPORTING LAG</a>
+    <h5 class="reporting-lag-bullet">{{publisher.reportingLag}}</h5>
+
+    <a href="#" class="history-info">HISTORY</a>
+    <h5 class="history-bullet">{{publisher.history}}</h5>
+
+    <a href="#" class="coverage-info">COVERAGE INFO</a>
+    <h5 class="coverage-bullet">{{publisher.coverage}}</h5>
+  </div>
+
+  <div class="tables-api-bar">
+    <a href="#" class="tables-api-info">Tables API</a>
+  </div>
+  <div class="pricing-bar">
+    <h5 class="pricing-header">PRICING</h5>
+  </div>
+</div>
+
+
+
 
 {{outlet}}
