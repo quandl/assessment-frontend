@@ -26,36 +26,38 @@
 
 <!-- TODO: Store this in it's own component -->
 <div class="data-display">
-  <h5>Datasets for {{publisher.title}}</h5>
+  <h5 class="publisher-data-header">Datasets for {{publisher.title}}</h5>
   {{#each products as |product|}}
-    <div class="data-display-title">
-      <h5 class="data-display-header">{{link-to product.name 'products.show' product.id}}</h5>
-      <h5 class="data-display-header">{{link-to 'EXPAND' 'products.show' product.id}}</h5>
-    </div>
-    <div class="data-display-table">
-      <table>
-        <!-- Displays the categories -->
-        <tr>
-          {{#each product.categoriesSubset as |category|}}
-            <td>{{category}}</td>
-          {{/each}}
-        </tr>
-
-        <!-- Displays the rows of data, as collected in route.js -->
-        <!-- TODO: Find a way to do this with a component method -->
-          {{#each product.productDataSubsetEntries as |product|}}
-            {{#each product as |row|}}
-              <tr>
-                {{#each row as |rowData|}}
-                  <td>{{rowData}}</td>
-                {{/each}}
-              </tr>
+    <div class="data-display-wrapper">
+      <div class="data-display-title">
+        <h5 class="data-display-header">{{link-to product.name 'products.show' product.id}}</h5>
+        <h5 class="data-display-expand">{{link-to 'EXPAND' 'products.show' product.id}}</h5>
+      </div>
+      <div class="data-display-table">
+        <table>
+          <!-- Displays the categories -->
+          <tr>
+            {{#each product.categoriesSubset as |category|}}
+              <td>{{category}}</td>
             {{/each}}
-          {{/each}}
-      </table>
-    </div>
-    <div class="data-display-footer">
-      <p>SAMPLE ROWS</p>
+          </tr>
+
+          <!-- Displays the rows of data, as collected in route.js -->
+          <!-- TODO: Find a way to do this with a component method -->
+            {{#each product.productDataSubsetEntries as |product|}}
+              {{#each product as |row|}}
+                <tr>
+                  {{#each row as |rowData|}}
+                    <td>{{rowData}}</td>
+                  {{/each}}
+                </tr>
+              {{/each}}
+            {{/each}}
+        </table>
+      </div>
+      <div class="data-display-footer">
+        <p>SAMPLE ROWS</p>
+      </div>
     </div>
   {{/each}}
 </div>

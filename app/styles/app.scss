@@ -1,6 +1,7 @@
 // Style files in the pods folder are automatically loaded in.
 @import 'pod-styles';
 // TODO: Learn how to split css files in ember
+/// General styling
 body {
   font-family: 'Source Sans Pro';
 }
@@ -16,6 +17,8 @@ a {
 td {
   font-size: .55em;
 }
+
+/// For the nav-bar
 
 .nav-wrapper {
   position: relative;
@@ -98,4 +101,49 @@ nav {
 .publisher {
   float: left;
   color: white;
+}
+
+// For the data display windows, under the nav-bar
+.data-display {
+  display: inline-block;
+  margin-left: 10%;
+  background-color: #f5fafd;
+  width: 60%;
+}
+
+.publisher-data-header {
+  margin: 0;
+  margin-left: 15px;
+  margin-top: 20px;
+  color: #9aa9b3;
+  font-weight: 100;
+}
+
+.data-display-wrapper {
+  border: solid;
+  border-width: .1px;
+  border-color: #d2d7dd;
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+.data-display-title {
+  padding: 10px;
+  background-color: #fff;
+  border: solid;
+  border-width: .1px;
+  border-color: #d2d7dd;
+}
+
+.data-display-header {
+  display: inline-block;
+  margin: 0;
+}
+
+.data-display-expand {
+  float: right;
+  margin: 0;
+  line-height: 23px;
 }
