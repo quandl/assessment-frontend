@@ -30,37 +30,32 @@
   {{#each products as |product|}}
     <div class="data-display-wrapper">
       <div class="data-display-title">
-        <h5 class="data-display-header">{{link-to product.name 'products.show' product.id}}</h5>
+        <h5 class="data-display-header">{{product.name}}</h5>
         <h5 class="data-display-expand">{{link-to 'EXPAND' 'products.show' product.id}}</h5>
       </div>
-      <div class="data-display-table">
-        <table>
-          <!-- Displays the categories -->
-          <div class="data-category-row">
+
+      <table WIDTH="100%" CELLPADDING="4" CELLSPACING="1">
+        <!-- Displays the categories -->
+        <tr>
+          {{#each product.categoriesSubset as |category|}}
+            <td class="data-category">{{category}}</td>
+          {{/each}}
+        </tr>
+        <!-- Displays the rows of data, as collected in route.js -->
+        <!-- TODO: Find a way to do this with a component method -->
+        {{#each product.productDataSubsetEntries as |product|}}
+          {{#each product as |row|}}
             <tr>
-              {{#each product.categoriesSubset as |category|}}
-                <td class="data-category">{{category}}</td>
+              {{#each row as |rowData|}}
+                <td class="data-field">{{rowData}}</td>
               {{/each}}
             </tr>
-          </div>
-
-          <!-- Displays the rows of data, as collected in route.js -->
-          <!-- TODO: Find a way to do this with a component method -->
-          {{#each product.productDataSubsetEntries as |product|}}
-            {{#each product as |row|}}
-              <div class="data-row">
-                <tr>
-                  {{#each row as |rowData|}}
-                    <td class="data-field">{{rowData}}</td>
-                  {{/each}}
-                </tr>
-              </div>
-            {{/each}}
           {{/each}}
-        </table>
-      </div>
+        {{/each}}
+      </table>
+
       <div class="data-display-footer">
-        <p>SAMPLE ROWS</p>
+        <p class="data-footer">SAMPLE ROWS</p>
       </div>
     </div>
   {{/each}}

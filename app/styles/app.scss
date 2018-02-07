@@ -107,8 +107,9 @@ nav {
 
 // For the data display windows, under the nav-bar
 table {
-  width: 100%;
+  table-layout: fixed;
 }
+
 .data-display {
   display: inline-block;
   margin-left: 5%;
@@ -157,28 +158,16 @@ table {
   margin-right: 15px;
 }
 
-.data-category-row {
-  border-bottom: solid;
-  border-width: .1px;
-  border-color: #d2d7dd;
-}
-
 .data-category {
   font-weight: 700;
-  padding: 10px;
-  width: 15%;
-}
-
-.data-row {
-  background-color: #fff;
   border-bottom: solid;
   border-width: .1px;
   border-color: #d2d7dd;
 }
 
 .data-field {
-  padding: 10px;
-  width: 15%;
-  padding-top: 1px;
-  padding-bottom: 1px;
+  background-color: #fff;
+  border-bottom: solid;
+  border-width: .1px;
+  border-color: #d2d7dd;
 }
