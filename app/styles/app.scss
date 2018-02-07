@@ -14,9 +14,6 @@ a {
   text-decoration: none;
 }
 
-td {
-  font-size: .55em;
-}
 
 /// For the nav-bar
 
@@ -110,6 +107,13 @@ table {
   table-layout: fixed;
 }
 
+td {
+  font-size: .55em;
+}
+
+td:first-child {
+  padding-left: 13px;
+}
 .data-display {
   display: inline-block;
   margin-left: 5%;
@@ -170,4 +174,13 @@ table {
   border-bottom: solid;
   border-width: .1px;
   border-color: #d2d7dd;
+}
+
+.data-footer {
+  font-size: .6em;
+  font-weight: 500;
+  margin: 0;
+  padding: 9px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }

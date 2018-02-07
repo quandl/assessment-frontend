@@ -36,7 +36,7 @@
 
       <table WIDTH="100%" CELLPADDING="4" CELLSPACING="1">
         <!-- Displays the categories -->
-        <tr>
+        <tr class="data-row">
           {{#each product.categoriesSubset as |category|}}
             <td class="data-category">{{category}}</td>
           {{/each}}
@@ -45,7 +45,7 @@
         <!-- TODO: Find a way to do this with a component method -->
         {{#each product.productDataSubsetEntries as |product|}}
           {{#each product as |row|}}
-            <tr>
+            <tr class="data-row">
               {{#each row as |rowData|}}
                 <td class="data-field">{{rowData}}</td>
               {{/each}}

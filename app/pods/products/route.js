@@ -20,7 +20,7 @@ let Product = EmberObject.extend({
   // TODO: Can this be done in a component or more efficiently?
   productDataSubsetEntries: Ember.computed('data', function() {
     var productDataArray  = [];
-    var productDataSubset = this.get('data').slice(0, 10);
+    var productDataSubset = this.get('data').slice(0, 7);
     productDataSubset.forEach(function(row) {
       var rowData = [];
       rowData.push(Object.values(row).slice(0, 11));
