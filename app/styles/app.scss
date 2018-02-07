@@ -13,6 +13,7 @@ h1, h2, h3, h4, h5 {
 
 a {
   text-decoration: none;
+  color: #0096b9;
 }
 
 
@@ -119,7 +120,7 @@ td:first-child {
   display: inline-block;
   margin-left: 5%;
   background-color: #f5fafd;
-  width: 65%;
+  width: 60%;
   border-right: solid;
   border-width: .1px;
   border-color: #d2d7dd;
@@ -188,12 +189,13 @@ td:first-child {
 
 // For the right-hand data overview cell
 .data-overview {
-    display: inline-block;
-    float: right;
-    width: 24%;
-    margin: 0;
-    padding: 0;
-    margin-right: 5%
+  display: inline-block;
+  float: right;
+  width: 28%;
+  margin: 0;
+  padding: 0;
+  margin-right: 6%;
+  background-color: #ffffff;
 }
 
 .tab-btn {
@@ -208,4 +210,37 @@ td:first-child {
   display: inline;
   color: #65ddba;
   font-weight:800
+}
+
+.overview-bullet-wrapper {
+  border-bottom: solid;
+  border-width: .1px;
+  border-color: #d2d7dd;
+}
+
+.data-overview-header {
+  margin: 0;
+  line-height: 0px;
+  font-size: .7em;
+}
+
+.i-icon {
+  height: 11px;
+}
+
+.bullet-name {
+  padding-top: 14px;
+  display: inline-block;
+  font-size: .7em;
+  color: #9aa9b3;
+}
+
+.bullet-text {
+  position: absolute;
+  right: 72px;
+  padding-top: 14px;
+  display: inline-block;
+  margin: 0;
+  float: right;
+  font-size: .7em;
 }

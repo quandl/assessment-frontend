@@ -65,22 +65,33 @@
 <div class="data-overview">
   <div class="btn tab-btn">COMMERCIAL DATA</div>
   <h5 class="data-overview-header">DATA OVERVIEW</h5>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
+  <p class="overview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
   <div class="data-bullets">
-    <a href="#" class="delivery-frequency-info">DELIVERY FREQUENCY</a>
-    <h5 class="delivery-frequency-bullet">{{publisher.deliveryFrequency}}</h5>
-
-    <a href="#" class="data-frequency-info">DATA FREQUENCY</a>
-    <h5 class="data-frequency-bullet">{{publisher.dataFrequency}}</h5>
-
-    <a href="#" class="reporting-lag-info">REPORTING LAG</a>
-    <h5 class="reporting-lag-bullet">{{publisher.reportingLag}}</h5>
-
-    <a href="#" class="history-info">HISTORY</a>
-    <h5 class="history-bullet">{{publisher.history}}</h5>
-
-    <a href="#" class="coverage-info">COVERAGE INFO</a>
-    <h5 class="coverage-bullet">{{publisher.coverage}}</h5>
+    <div class="overview-bullet-wrapper">
+      <a href="#" class="bullet-name">DELIVERY FREQUENCY</a>
+      <img src="/assets/info.png" class="i-icon" alt="">
+      <h5 class="bullet-text">{{publisher.deliveryFrequency}}</h5>
+    </div>
+    <div class="overview-bullet-wrapper">
+      <a href="#" class="bullet-name">DATA FREQUENCY</a>
+      <img src="/assets/info.png" class="i-icon" alt="">
+      <h5 class="bullet-text">{{publisher.dataFrequency}}</h5>
+    </div>
+    <div class="overview-bullet-wrapper">
+      <a href="#" class="bullet-name">REPORTING LAG</a>
+      <img src="/assets/info.png" class="i-icon" alt="">
+      <h5 class="bullet-text">{{publisher.reportingLag}}</h5>
+    </div>
+    <div class="overview-bullet-wrapper">
+      <a href="#" class="bullet-name">HISTORY</a>
+      <img src="/assets/info.png" class="i-icon" alt="">
+      <h5 class="bullet-text">{{publisher.history}}</h5>
+    </div>
+    <div class="overview-bullet-wrapper">
+      <a href="#" class="bullet-name">COVERAGE INFO</a>
+      <img src="/assets/info.png" class="i-icon" alt="">
+      <h5 class="bullet-text">{{publisher.coverage}}</h5>
+    </div>
   </div>
 
   <div class="tables-api-bar">
