@@ -284,3 +284,30 @@ td:first-child {
   padding: 5px;
   color: #fff;
 }
+
+// For the products show page header
+.publisher-bar {
+  height: 70px;
+  background-color: #004861;
+}
+
+.arrow {
+  display: inline-block;
+  float: left;
+  margin: 0;
+  font-size: 2em;
+  padding-top: 15px;
+  padding-left: 8px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.publisher-show {
+  margin: 0;
+  line-height: 67px;
+}
+
+#ember273 {
+  color: #fff;
+  font-size: .7em;
+}
