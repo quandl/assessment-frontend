@@ -29,12 +29,15 @@
   <!-- TODO: Store this in it's own component -->
   <h4>{{link-to product.name 'products.show' product.id}}</h4>
   <table>
+    <!-- Displays the categories -->
     <tr>
       {{#each product.categoriesSubset as |category|}}
         <td>{{category}}</td>
       {{/each}}
     </tr>
 
+    <!-- Displays the rows of data, as collected in route.js -->
+    <!-- TODO: Find a way to do this with a component method -->
       {{#each product.productDataSubsetEntries as |product|}}
         {{#each product as |row|}}
           <tr>
