@@ -29,14 +29,21 @@
   <!-- TODO: Store this in it's own component -->
   <h4>{{link-to product.name 'products.show' product.id}}</h4>
   <table>
-    {{#each product.categoriesSubset as |category|}}
-      <td>{{category}}</td>
-    {{/each}}
-    {{#each product.productDataSubset as |data|}}
-      <tr>
-        <td>{{product.productDataSubsetSample}}</td>
-      </tr>
-    {{/each}}
+    <tr>
+      {{#each product.categoriesSubset as |category|}}
+        <td>{{category}}</td>
+      {{/each}}
+    </tr>
+
+      {{#each product.productDataSubsetEntries as |product|}}
+        {{#each product as |row|}}
+          <tr>
+            {{#each row as |rowData|}}
+              <td>{{rowData}}</td>
+            {{/each}}
+          </tr>
+        {{/each}}
+      {{/each}}
   </table>
 {{/each}}
 

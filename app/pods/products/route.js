@@ -15,6 +15,18 @@ let Product = EmberObject.extend({
   categoriesSubset: Ember.computed(function() {
     var dataSubset = this.get('data')[0];
     return Object.keys(dataSubset).slice(0, 10);
+  }),
+  // get only first 10 entries per row provided
+  // TODO: Can this be done in a component or more efficiently?
+  productDataSubsetEntries: Ember.computed('data', function() {
+    var productDataArray  = [];
+    var productDataSubset = this.get('data').slice(0, 10);
+    productDataSubset.forEach(function(row) {
+      var rowData = [];
+      rowData.push(Object.values(row).slice(0, 10));
+      productDataArray.push(rowData);
+    })
+    return productDataArray;
   })
 })
 
