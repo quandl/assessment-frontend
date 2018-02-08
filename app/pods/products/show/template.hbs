@@ -1,17 +1,40 @@
-<h3>Sub-Product Page</h3>
+<div class="publisher-bar">
+  {{#link-to 'products'}}
+    <p class="arrow">&#60;</p>
+    <img src="/assets/avatar.png" alt="" class="avatar">
+    <h3 class="publisher publisher-show">{{publisher.title}}</h3>
+  {{/link-to}}
+</div>
 
-{{link-to 'Product page' 'products'}}
 
-<h4>{{product.name}}</h4>
+<!-- TODO: Redesign the scroll function to match the mockup -->
+<div class="table-display-window">
+  <h4>{{product.name}}</h4>
+  <div class="">
 
-<table>
-  {{#each productData as |data|}}
-    <tr>
-      <td>{{data.ticker}}</td>
-      <td>{{data.comp_name}}</td>
-      <td>{{data.per_end_date}}</td>
-    </tr>
-  {{/each}}
-</table>
+  </div>
+  <div class="table-wrapper">
+    <table class="show-table" WIDTH="100%" CELLPADDING="4" CELLSPACING="0">
+      <!-- Displays the categories -->
+      <tr class="data-row category-row-show">
+        <td class="data-category data-cell-show"></td>
+        {{#each product.categories as |category|}}
+          <td class="data-category data-cell-show">{{category}}</td>
+        {{/each}}
+      </tr>
+      <!-- Displays the rows of data, as collected in route.js -->
+      {{#each product.productData as |product index|}}
+        {{#each product as |row|}}
+          <tr class="data-row">
+            <td class="data-field data-cell-show">{{index}}</td>
+            {{#each row as |rowData|}}
+              <td class="data-field data-cell-show">{{rowData}}</td>
+            {{/each}}
+          </tr>
+        {{/each}}
+      {{/each}}
+    </table>
+  </div>
+</div>
 
 {{outlet}}

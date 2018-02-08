@@ -7,7 +7,38 @@ let Product = EmberObject.extend({
   name: null,
   data: [],
   productDataSubset: Ember.computed('data', function() {
-    return this.get('data').slice(0, 7);
+    return this.get('data').slice(0, 10);
+  }),
+  categories: Ember.computed(function() {
+    return Object.keys(this.data[0]);
+  }),
+  categoriesSubset: Ember.computed(function() {
+    var dataSubset = this.get('data')[0];
+    return Object.keys(dataSubset).slice(0, 11);
+  }),
+
+  productData: Ember.computed('data', function() {
+    var productDataArray  = [];
+    var productDataSubset = this.get('data');
+    productDataSubset.forEach(function(row) {
+      var rowData = [];
+      rowData.push(Object.values(row));
+      productDataArray.push(rowData);
+    })
+    return productDataArray;
+  }),
+
+  // get only first 10 entries per row provided
+  // TODO: Can this be done in a component or more efficiently?
+  productDataSubsetEntries: Ember.computed('data', function() {
+    var productDataArray  = [];
+    var productDataSubset = this.get('data').slice(0, 7);
+    productDataSubset.forEach(function(row) {
+      var rowData = [];
+      rowData.push(Object.values(row).slice(0, 11));
+      productDataArray.push(rowData);
+    })
+    return productDataArray;
   })
 })
 
@@ -28,8 +59,8 @@ export default Route.extend({
       ],
       publisher: EmberObject.create({
         title: 'XYZ Corp',
-        deliveryFrequency: 'daily',
-        dataFrequency: 'weekly',
+        deliveryFrequency: 'Daily',
+        dataFrequency: 'Weekly',
         reportingLag: '12 hours',
         history: '2005-11-01',
         coverage: '5000+ companies, 59 indicators'
