@@ -8,23 +8,26 @@
 <h4>{{product.name}}</h4>
 
 <!-- TODO: Make the window smaller and scrollable -->
-<table WIDTH="100%" CELLPADDING="4" CELLSPACING="0">
-  <!-- Displays the categories -->
-  <tr class="data-row">
-    {{#each product.categories as |category|}}
-      <td class="data-category data-cell-show">{{category}}</td>
+<div class="table-wrapper">
+  <table class="show-table" WIDTH="100%" CELLPADDING="4" CELLSPACING="0">
+    <!-- Displays the categories -->
+    <tr class="data-row category-row-show">
+      {{#each product.categories as |category|}}
+        <td class="data-category data-cell-show">{{category}}</td>
+      {{/each}}
+    </tr>
+    <!-- Displays the rows of data, as collected in route.js -->
+    {{#each product.productData as |product|}}
+      {{#each product as |row|}}
+        <tr class="data-row">
+          {{#each row as |rowData|}}
+            <td class="data-field data-cell-show">{{rowData}}</td>
+          {{/each}}
+        </tr>
+      {{/each}}
     {{/each}}
-  </tr>
-  <!-- Displays the rows of data, as collected in route.js -->
-  {{#each product.productData as |product|}}
-    {{#each product as |row|}}
-      <tr class="data-row">
-        {{#each row as |rowData|}}
-          <td class="data-field data-cell-show">{{rowData}}</td>
-        {{/each}}
-      </tr>
-    {{/each}}
-  {{/each}}
-</table>
+  </table>
+</div>
+
 
 {{outlet}}

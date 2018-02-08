@@ -116,6 +116,9 @@ td {
 
 td:first-child {
   padding-left: 13px;
+  border-left: solid;
+  border-width: .1px;
+  border-color: #d2d7dd;
 }
 .data-display {
   display: inline-block;
@@ -316,4 +319,15 @@ td:first-child {
   border: dotted;
   border-width: .1px;
   border-color: #d2d7dd;
+}
+
+.data-cell-show:first-child {
+  padding-left: 2px;
+  border-left: dotted;
+  border-width: .1px;
+  border-color: #d2d7dd;
+}
+
+.show-table {
+  table-layout: unset;
 }
