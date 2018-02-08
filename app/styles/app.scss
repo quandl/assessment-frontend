@@ -292,6 +292,8 @@ td:first-child {
 .publisher-bar {
   height: 70px;
   background-color: #004861;
+  width: 80%;
+  margin-left: 10%;
 }
 
 .arrow {
@@ -308,6 +310,16 @@ td:first-child {
 .publisher-show {
   margin: 0;
   line-height: 67px;
+}
+
+.table-display-window {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.table-wrapper {
+  height: 500px;
+  overflow: scroll;
 }
 
 #ember273 {

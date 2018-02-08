@@ -5,29 +5,30 @@
   <h3 class="publisher publisher-show">{{link-to publisher.title 'products'}}</h3>
 </div>
 
-<h4>{{product.name}}</h4>
 
-<!-- TODO: Make the window smaller and scrollable -->
-<div class="table-wrapper">
-  <table class="show-table" WIDTH="100%" CELLPADDING="4" CELLSPACING="0">
-    <!-- Displays the categories -->
-    <tr class="data-row category-row-show">
-      {{#each product.categories as |category|}}
-        <td class="data-category data-cell-show">{{category}}</td>
+<!-- TODO: Redesign the scroll function to match the mockup -->
+<div class="table-display-window">
+  <h4>{{product.name}}</h4>
+  <div class="table-wrapper">
+    <table class="show-table" WIDTH="100%" CELLPADDING="4" CELLSPACING="0">
+      <!-- Displays the categories -->
+      <tr class="data-row category-row-show">
+        {{#each product.categories as |category|}}
+          <td class="data-category data-cell-show">{{category}}</td>
+        {{/each}}
+      </tr>
+      <!-- Displays the rows of data, as collected in route.js -->
+      {{#each product.productData as |product|}}
+        {{#each product as |row|}}
+          <tr class="data-row">
+            {{#each row as |rowData|}}
+              <td class="data-field data-cell-show">{{rowData}}</td>
+            {{/each}}
+          </tr>
+        {{/each}}
       {{/each}}
-    </tr>
-    <!-- Displays the rows of data, as collected in route.js -->
-    {{#each product.productData as |product|}}
-      {{#each product as |row|}}
-        <tr class="data-row">
-          {{#each row as |rowData|}}
-            <td class="data-field data-cell-show">{{rowData}}</td>
-          {{/each}}
-        </tr>
-      {{/each}}
-    {{/each}}
-  </table>
+    </table>
+  </div>
 </div>
-
 
 {{outlet}}
