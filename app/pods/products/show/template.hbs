@@ -1,14 +1,18 @@
-<!-- TODO: Make this all a back-link -->
 <div class="publisher-bar">
-  <p class="arrow">&#60;</p>
-  <img src="/assets/avatar.png" alt="" class="avatar">
-  <h3 class="publisher publisher-show">{{link-to publisher.title 'products'}}</h3>
+  {{#link-to 'products'}}
+    <p class="arrow">&#60;</p>
+    <img src="/assets/avatar.png" alt="" class="avatar">
+    <h3 class="publisher publisher-show">{{publisher.title}}</h3>
+  {{/link-to}}
 </div>
 
 
 <!-- TODO: Redesign the scroll function to match the mockup -->
 <div class="table-display-window">
   <h4>{{product.name}}</h4>
+  <div class="">
+
+  </div>
   <div class="table-wrapper">
     <table class="show-table" WIDTH="100%" CELLPADDING="4" CELLSPACING="0">
       <!-- Displays the categories -->
