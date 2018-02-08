@@ -7,20 +7,20 @@
 
 <h4>{{product.name}}</h4>
 
-<table WIDTH="100%" CELLPADDING="4" CELLSPACING="1">
+<!-- TODO: Make the window smaller and scrollable -->
+<table WIDTH="100%" CELLPADDING="4" CELLSPACING="0">
   <!-- Displays the categories -->
   <tr class="data-row">
     {{#each product.categories as |category|}}
-      <td class="data-category">{{category}}</td>
+      <td class="data-category data-cell-show">{{category}}</td>
     {{/each}}
   </tr>
   <!-- Displays the rows of data, as collected in route.js -->
-  <!-- TODO: Find a way to do this with a component method -->
   {{#each product.productData as |product|}}
     {{#each product as |row|}}
       <tr class="data-row">
         {{#each row as |rowData|}}
-          <td class="data-field">{{rowData}}</td>
+          <td class="data-field data-cell-show">{{rowData}}</td>
         {{/each}}
       </tr>
     {{/each}}
