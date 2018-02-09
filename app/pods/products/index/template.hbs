@@ -1,17 +1,62 @@
-<h3>Product Page - Index - {{publisher.title}}</h3>
+<!-- COMPONENT 1 -->
+<div class="nav-wrapper">
+  <nav>
+    <div class="links-bar">
+      <!-- Displays the hamburger menu icon -->
+      {{hamburger-icon}}
 
-{{#each products as |product|}}
-  <h4>{{link-to product.name 'products.show' product.id}}</h4>
+      <!-- Left items on nav bar -->
+      <div class="left-nav nav">
+        {{nav-tab text='ALTERNATIVE DATA'}}
+        {{nav-tab text='CORE FINANCIAL DATA'}}
+      </div>
 
-  <table>
-    {{#each product.productDataSubset as |data|}}
-      <tr>
-        <td>{{data.ticker}}</td>
-        <td>{{data.comp_name}}</td>
-        <td>{{data.per_end_date}}</td>
-      </tr>
-    {{/each}}
-  </table>
-{{/each}}
+      <img src='assets/quandl-logo.svg' class="logo">
 
-{{outlet}}
+      <!-- Right items on nav bar -->
+      <div class="right-nav nav">
+        {{nav-tab text='DOCS & HELP'}}
+        {{nav-tab text='BLOG'}}
+        {{nav-tab text='SIGN IN'}}
+      </div>
+    </div>
+
+    <img src="/assets/avatar.png" alt="" class="avatar">
+    <h3 class="publisher">{{publisher.title}}</h3>
+  </nav>
+</div>
+
+<div class="data-display">
+  <h5 class="publisher-data-header">Datasets for {{publisher.title}}</h5>
+  {{#each products as |product|}}
+    <div class="data-display-wrapper">
+      <!-- Displays the table showing a sample of the available data -->
+      {{sample-data-table product=product}}
+    </div>
+  {{/each}}
+</div>
+
+<!-- This displays the overview of the data, on the right-hand side of the screen -->
+<div class="data-overview">
+
+  <div class="green-btn">COMMERCIAL DATA</div>
+
+  <h5 class="data-overview-header">DATA OVERVIEW</h5>
+  <p class="overview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
+
+  <!-- The container for each of the info links in the data overview -->
+  <div class="data-bullets">
+    {{data-overview-bullet bulletName='DELIVERY FREQUENCY' publisher=publisher}}
+    {{data-overview-bullet bulletName='DATA FREQUENCY' publisher=publisher}}
+    {{data-overview-bullet bulletName='REPORTING LAG' publisher=publisher}}
+    {{data-overview-bullet bulletName='HISTORY' publisher=publisher}}
+    {{data-overview-bullet bulletName='COVERAGE' publisher=publisher}}
+  </div>
+
+  <!-- Renders the button to link to the API -->
+  {{tables-api-button text='Tables API'}}
+
+  {{#click-log}}
+    <a href='#' class="blue-button">PRICING</a>
+  {{/click-log}}
+</div>

@@ -1,2 +1,442 @@
 // Style files in the pods folder are automatically loaded in.
 @import 'pod-styles';
+// TODO: Learn how to split css files in ember
+/// General styling
+body {
+  font-family: 'Source Sans Pro';
+  background-color: #f9f9fb;
+}
+
+p {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Quantico";
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #0096b9;
+}
+
+/// For the nav-bar
+.nav-wrapper {
+  position: relative;
+  height: 100px;
+}
+
+nav {
+  position: absolute;
+  background-color: #004861;
+  text-align: center;
+  width: 90%;
+  left: 5%;
+  height: 110px;
+}
+
+.hamburger{
+  float: left;
+  display: inline-block;
+  padding: 10px;
+  background-color: #133347;
+}
+
+.slice {
+  width: 20px;
+  height: 1px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+.middle {
+  height: 2px;
+}
+
+.nav {
+  display: inline-block;
+}
+
+.left-nav {
+  float: left;
+  height: 40px;
+}
+
+.right-nav {
+  float: right;
+  height: 40px;
+}
+
+.nav-item {
+  background-color: #133347;
+  display: inline-block;
+  color: white;
+  font-size: .6em;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 10px;
+}
+
+.left-nav > .ember-view {
+  display: inline-block;
+  float: left;
+}
+
+.right-nav > .ember-view {
+  display: inline-block;
+  float: right;
+}
+
+.nav-item:hover {
+  background-color: #004861;
+}
+
+.links-bar {
+  background-color: #133347;
+  height: 40px;
+}
+
+.logo {
+  height: 25px;
+  padding-top: 8px;
+  padding-right: 8%;
+  padding-left: 4%;
+}
+
+.avatar {
+  float: left;
+  height: 45px;
+  margin: 12px;
+}
+
+.publisher {
+  float: left;
+  color: white;
+  line-height: 24px;
+  font-size: 1.5em;
+  margin-top: 22px;
+}
+
+// For the data display windows, under the nav-bar
+table {
+  table-layout: fixed;
+}
+
+td {
+  font-size: .55em;
+}
+
+td:first-child {
+  padding-left: 13px;
+  border-left: solid;
+  border-width: .1px;
+  border-color: #d2d7dd;
+}
+.data-display {
+  display: inline-block;
+  margin-left: 5%;
+  background-color: #f5fafd;
+  width: 63%;
+  border: solid;
+  border-width: .1px;
+  border-color: #d2d7dd;
+  padding-right: 0.9%;
+}
+
+.publisher-data-header {
+  margin-left: 15px;
+  margin-top: 35px;
+  color: #9aa9b3;
+  font-weight: 100;
+}
+
+.data-display-wrapper {
+  border: solid;
+  border-width: .1px;
+  border-color: #d2d7dd;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+
+.data-display-title {
+  padding: 15px;
+  background-color: #fff;
+  border: solid;
+  border-width: .1px;
+  border-color: #d2d7dd;
+}
+
+.data-display-header {
+  display: inline-block;
+}
+
+.data-display-expand {
+  float: right;
+  line-height: 23px;
+  margin-right: 15px;
+}
+
+.data-category {
+  font-weight: 700;
+  border-bottom: solid;
+  border-width: .1px;
+  border-color: #d2d7dd;
+}
+
+.data-field {
+  background-color: #fff;
+  border-bottom: solid;
+  border-width: .1px;
+  border-color: #d2d7dd;
+}
+
+.data-footer {
+  font-size: .6em;
+  font-weight: 500;
+  padding: 9px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border: solid;
+  border-top: none;
+  border-width: .1px;
+  border-color: #d2d7dd;
+  background-color: #f0f4f8;
+  font-weight: 700;
+  color: #a4a5ae;
+}
+
+// For the right-hand data overview cell
+.data-overview {
+  display: inline-block;
+  float: right;
+  width: 25%;
+  margin-right: 5%;
+  background-color: #ffffff;
+  padding-left: 1%;
+}
+
+.green-btn {
+  line-height: 70px;
+  font-size: .7em;
+  padding: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  display: inline;
+  color: #65ddba;
+  font-weight:800
+}
+
+.overview-bullet-wrapper {
+  border-bottom: solid;
+  border-width: .1px;
+  border-color: #d2d7dd;
+}
+
+.overview-bullet-wrapper:last-child {
+  border: none;
+}
+
+.data-overview-header {
+  line-height: 0px;
+  font-size: .7em;
+  margin-bottom: 15px;
+}
+
+.overview-text {
+  padding-right: 15px;
+}
+
+.i-icon {
+  height: 11px;
+}
+
+.data-bullets {
+  padding-right: 15px;
+}
+
+.bullet-name {
+  padding-top: 14px;
+  display: inline-block;
+  font-size: .7em;
+  color: #9aa9b3;
+}
+
+.bullet-text {
+  position: absolute;
+  right: 72px;
+  padding-top: 14px;
+  display: inline-block;
+  float: right;
+  font-size: .7em;
+  padding-right: 5px;
+  color: #5b8491;
+}
+
+.tables-api-bar {
+  display: inline-block;
+  border: solid;
+  border-width: 1px;
+  border-color: #0096b9;
+  margin-top: 24px;
+  width: 80%;
+  margin-left: 8%;
+}
+
+.i-icon-api {
+  float: right;
+  padding: 5px;
+}
+
+.tables-api-info {
+  display: inline-block;
+  padding-left: 4px;
+  font-size: .8em;
+  color: #000;
+}
+
+.blue-button {
+  display: inline-block;
+  text-align: center;
+  width: 80%;
+  margin-left: 8%;
+  background-color: #0096b9;
+  margin-top: 15px;
+  padding: 5px;
+  color: #fff;
+}
+
+// For the products show page header
+.publisher-bar {
+  height: 50px;
+  background-color: #004861;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.avatar-show {
+  float: left;
+  height: 34px;
+  margin: 8px;
+}
+
+.arrow {
+  display: inline-block;
+  float: left;
+  font-size: 1em;
+  padding-top: 15px;
+  padding-left: 8px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.publisher-show {
+  line-height: 10px;
+  font-size: 1em;
+}
+
+// For the show page table
+.table-display-window {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.table-wrapper {
+  height: 494px;
+  overflow: scroll;
+}
+
+.data-cell-show {
+  border: dotted;
+  border-width: .1px;
+  border-color: #d2d7dd;
+}
+
+.data-cell-show:first-child {
+  padding-left: 2px;
+  border-left: dotted;
+  border-width: .1px;
+  border-color: #d2d7dd;
+}
+
+.show-table {
+  table-layout: unset;
+}
+
+.product-name {
+  display: inline-block;
+  line-height: 30px;
+  margin: 3px;
+  margin-left: 0px;
+}
+
+.button-bar {
+  text-align: right;
+  display: inline-block;
+  float: right;
+  width: 240px;
+  margin: 3px;
+  margin-right: 10px;
+}
+
+.white-button {
+  display: inline-block;
+  padding: 5px;
+  border: solid;
+  border-width: .1px;
+  border-color: #0093ba;
+  color: #0093ba;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: .7em;
+}
+
+.download-button {
+  margin: 0;
+  width: 100px;
+  margin-left: 10px;
+  font-size: .7em;
+}
+
+.button-bar > .ember-view {
+  display: inline-block;
+}
+
+.show-table-options > .ember-view {
+  display: inline-block;
+}
+
+.product-data {
+  margin: 3px;
+  border-bottom: solid;
+  border-width: .1px;
+  border-color: #d2d7dd;
+}
+
+.download-arrow {
+  color: #62c4db;
+}
+
+.table-option {
+  display: inline-block;
+  padding: 10px;
+  font-size: .7em;
+  color: #a4a5ae;
+  border-bottom: solid;
+  border-width: 2px;
+  border-color: #fff;
+}
+
+.table-option:hover {
+  font-weight: 700;
+  color: #0096b9;
+  border-bottom: solid;
+  border-width: 2px;
+  border-color: #0096b9;
+}

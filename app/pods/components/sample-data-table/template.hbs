@@ -1,0 +1,27 @@
+<!-- Displays a sample table on the index page -->
+<div class="data-display-title">
+  <h5 class="data-display-header">{{product.name}}</h5>
+  <h5 class="data-display-expand">{{link-to 'EXPAND' 'products.show' product.id}}</h5>
+</div>
+
+<table WIDTH="100%" CELLPADDING="4" CELLSPACING="0">
+  <!-- Displays the categories -->
+  <tr class="data-row">
+    {{#each product.categoriesSubset as |category|}}
+      <td class="data-category">{{category}}</td>
+    {{/each}}
+  </tr>
+  <!-- Displays the rows of data, as collected in route.js -->
+  {{#each product.productDataSubsetEntries as |product|}}
+    {{#each product as |row|}}
+      <tr class="data-row">
+        {{#each row as |rowData|}}
+          <td class="data-field">{{rowData}}</td>
+        {{/each}}
+      </tr>
+    {{/each}}
+  {{/each}}
+</table>
+
+<!-- Display's the table's footer text -->
+{{footer-bar text='SAMPLE ROWS'}}

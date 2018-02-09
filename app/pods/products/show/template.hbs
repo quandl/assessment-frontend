@@ -1,17 +1,18 @@
-<h3>Sub-Product Page</h3>
+<!-- Renders the bar showing who the publisher is, and linking back to the index -->
+{{publisher-bar publisher=publisher}}
 
-{{link-to 'Product page' 'products'}}
+<!-- Holds all the displays directly related to the table -->
+<div class="table-display-window">
 
-<h4>{{product.name}}</h4>
+  <!-- Renders the product header -->
+  {{product-bar product=product}}
 
-<table>
-  {{#each productData as |data|}}
-    <tr>
-      <td>{{data.ticker}}</td>
-      <td>{{data.comp_name}}</td>
-      <td>{{data.per_end_date}}</td>
-    </tr>
-  {{/each}}
-</table>
+  <!-- Renders the bar with display options for the full table -->
+  {{table-options-bar}}
 
-{{outlet}}
+  <!-- Renders the full table -->
+  {{full-table product=product}}
+
+  <!-- Display's the table's footer text -->
+  {{footer-bar text='SAMPLE ROWS'}}
+</div>
