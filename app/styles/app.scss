@@ -1,8 +1,6 @@
 // Style files in the pods folder are automatically loaded in.
 @import 'pod-styles';
-// TODO: First breakpoint at 1020px screen width
 // TODO: Learn how to split css files in ember
-// TODO: Remove margin from all p and h tags
 /// General styling
 body {
   font-family: 'Source Sans Pro';
@@ -288,6 +286,7 @@ td:first-child {
 }
 
 .tables-api-info {
+  display: inline-block;
   padding-left: 4px;
   font-size: .8em;
   color: #000;

@@ -1,11 +1,13 @@
 <!-- TODO: put nav in it's own component -->
 <div class="nav-wrapper">
   <nav>
-    <div class="hamburger">
-      <div class="slice"></div>
-      <div class="middle slice"></div>
-      <div class="slice"></div>
-    </div>
+    {{#link-to test}}
+      <div class="hamburger">
+        <div class="slice"></div>
+        <div class="middle slice"></div>
+        <div class="slice"></div>
+      </div>
+    {{/link-to}}
 
     <div class="links-bar">
       <div class="left-nav nav">
@@ -68,42 +70,53 @@
   <p class="overview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
   <div class="data-bullets">
     <div class="overview-bullet-wrapper">
-      <a href="#" class="bullet-name">DELIVERY FREQUENCY</a>
-      <img src="/assets/info.png" class="i-icon" alt="">
+      {{#link-to test}}
+        <p href="#" class="bullet-name">DELIVERY FREQUENCY</p>
+        <img src="/assets/info.png" class="i-icon" alt="">
+      {{/link-to}}
       <h5 class="bullet-text">{{publisher.deliveryFrequency}}</h5>
     </div>
     <div class="overview-bullet-wrapper">
-      <a href="#" class="bullet-name">DATA FREQUENCY</a>
-      <img src="/assets/info.png" class="i-icon" alt="">
+      {{#link-to test}}
+        <p href="#" class="bullet-name">DATA FREQUENCY</p>
+        <img src="/assets/info.png" class="i-icon" alt="">
+      {{/link-to}}
       <h5 class="bullet-text">{{publisher.dataFrequency}}</h5>
     </div>
     <div class="overview-bullet-wrapper">
-      <a href="#" class="bullet-name">REPORTING LAG</a>
-      <img src="/assets/info.png" class="i-icon" alt="">
+      {{#link-to test}}
+        <p href="#" class="bullet-name">REPORTING LAG</p>
+        <img src="/assets/info.png" class="i-icon" alt="">
+      {{/link-to}}
       <h5 class="bullet-text">{{publisher.reportingLag}}</h5>
     </div>
     <div class="overview-bullet-wrapper">
-      <a href="#" class="bullet-name">HISTORY</a>
-      <img src="/assets/info.png" class="i-icon" alt="">
+      {{#link-to test}}
+        <p href="#" class="bullet-name">HISTORY</p>
+        <img src="/assets/info.png" class="i-icon" alt="">
+      {{/link-to}}
       <h5 class="bullet-text">{{publisher.history}}</h5>
     </div>
     <div class="overview-bullet-wrapper">
-      <a href="#" class="bullet-name">COVERAGE</a>
-      <img src="/assets/info.png" class="i-icon" alt="">
+      {{#link-to test}}
+        <p href="#" class="bullet-name">COVERAGE</p>
+        <img src="/assets/info.png" class="i-icon" alt="">
+      {{/link-to}}
       <h5 class="bullet-text">{{publisher.coverage}}</h5>
     </div>
   </div>
 
-  <div class="tables-api-bar">
-    <a href="#" class="tables-api-info">Tables API</a>
-    <img src="/assets/info.png" class="i-icon i-icon-api" alt="">
-  </div>
-  <div class="blue-button">
-    <h5 class="blue-button-header">PRICING</h5>
-  </div>
+  {{#link-to test}}
+    <div class="tables-api-bar">
+      <p href="#" class="tables-api-info">Tables API</p>
+      <img src="/assets/info.png" class="i-icon i-icon-api" alt="">
+    </div>
+  {{/link-to}}
+  {{#link-to test}}
+    <div class="blue-button">
+      <h5 class="blue-button-header">PRICING</h5>
+    </div>
+  {{/link-to}}
 </div>
-
-
-
 
 {{outlet}}
