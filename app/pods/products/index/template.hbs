@@ -48,56 +48,13 @@
   <h5 class="data-overview-header">DATA OVERVIEW</h5>
   <p class="overview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
 
-  <!-- TODO: Each one of these can be made from one component
-  specify text and dynamic info -->
+  <!-- The container for each of the info links in the data overview -->
   <div class="data-bullets">
-
-    <div class="overview-bullet-wrapper">
-      {{#click-log}}
-        {{#link-to test}}
-          <p href="#" class="bullet-name">DELIVERY FREQUENCY</p>
-          <img src="/assets/info.png" class="i-icon" alt="">
-          <h5 class="bullet-text">{{publisher.deliveryFrequency}}</h5>
-        {{/link-to}}
-      {{/click-log}}
-    </div>
-
-    <div class="overview-bullet-wrapper">
-      {{#click-log}}
-        {{#link-to test}}
-          <p href="#" class="bullet-name">DATA FREQUENCY</p>
-          <img src="/assets/info.png" class="i-icon" alt="">
-          <h5 class="bullet-text">{{publisher.dataFrequency}}</h5>
-        {{/link-to}}
-      {{/click-log}}
-    </div>
-    <div class="overview-bullet-wrapper">
-      {{#click-log}}
-        {{#link-to test}}
-          <p href="#" class="bullet-name">REPORTING LAG</p>
-          <img src="/assets/info.png" class="i-icon" alt="">
-          <h5 class="bullet-text">{{publisher.reportingLag}}</h5>
-        {{/link-to}}
-      {{/click-log}}
-    </div>
-    <div class="overview-bullet-wrapper">
-      {{#click-log}}
-        {{#link-to test}}
-          <p href="#" class="bullet-name">HISTORY</p>
-          <img src="/assets/info.png" class="i-icon" alt="">
-          <h5 class="bullet-text">{{publisher.history}}</h5>
-        {{/link-to}}
-      {{/click-log}}
-    </div>
-    <div class="overview-bullet-wrapper">
-      {{#click-log}}
-        {{#link-to test}}
-          <p href="#" class="bullet-name">COVERAGE</p>
-          <img src="/assets/info.png" class="i-icon" alt="">
-          <h5 class="bullet-text">{{publisher.coverage}}</h5>
-        {{/link-to}}
-      {{/click-log}}
-    </div>
+    {{data-overview-bullet bulletName='DELIVERY FREQUENCY' publisher=publisher}}
+    {{data-overview-bullet bulletName='DATA FREQUENCY' publisher=publisher}}
+    {{data-overview-bullet bulletName='REPORTING LAG' publisher=publisher}}
+    {{data-overview-bullet bulletName='HISTORY' publisher=publisher}}
+    {{data-overview-bullet bulletName='COVERAGE' publisher=publisher}}
   </div>
 
   {{#click-log}}
