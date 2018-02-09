@@ -2,19 +2,8 @@
 <div class="nav-wrapper">
   <nav>
     <div class="links-bar">
-
-      <!-- COMPONENT 2 HAMBURGER -->
-      {{#click-log}}
-      <!-- Using 'test' in the link to to ensure that, while the link is clickable, it doesn't direct anywhere.
-      The error is intentional. -->
-        {{#link-to test}}
-          <div class="hamburger">
-            <div class="slice"></div>
-            <div class="middle slice"></div>
-            <div class="slice"></div>
-          </div>
-        {{/link-to}}
-      {{/click-log}}
+      <!-- Displays the hamburger menu icon -->
+      {{hamburger-icon}}
 
       <!-- COMPONENT 3 LEFT NAV -->
       <div class="left-nav nav">
