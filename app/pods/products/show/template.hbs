@@ -12,31 +12,39 @@
   <div class="publisher-data">
     <h4 class="product-name">{{product.name}}</h4>
     <div class="button-bar">
-      {{#link-to test}}
-        <div class="white-button">
-          <h4 class="white-button-header">COVERAGE</h4>
-        </div>
-      {{/link-to}}
-      {{#link-to test}}
-        <div class="blue-button blue-button-show">
-          <h4 class="blue-button-header blue-button-header-show">DOWNLOAD <span class="download-arrow">&#9660;</span></h4>
-        </div>
-      {{/link-to}}
+      {{#click-log}}
+        {{#link-to test}}
+          <div class="white-button">
+            <h4 class="white-button-header">COVERAGE</h4>
+          </div>
+        {{/link-to}}
+      {{/click-log}}
+      {{#click-log}}
+        {{#link-to test}}
+          <div class="blue-button blue-button-show">
+            <h4 class="blue-button-header blue-button-header-show">DOWNLOAD <span class="download-arrow">&#9660;</span></h4>
+          </div>
+        {{/link-to}}
+      {{/click-log}}
     </div>
   </div>
 
   <div class="show-table-options">
-    {{#link-to test}}
-      <div class="table-option">
-        <p class="table-option-text">DATA SAMPLE</p>
-      </div>
-    {{/link-to}}
+    {{#click-log}}
+      {{#link-to test}}
+        <div class="table-option">
+          <p class="table-option-text">DATA SAMPLE</p>
+        </div>
+      {{/link-to}}
+    {{/click-log}}
 
-    {{#link-to test}}
-      <div class="table-option">
-        <p class="table-option-text">COVERAGE</p>
-      </div>
-    {{/link-to}}
+    {{#click-log}}
+      {{#link-to test}}
+        <div class="table-option">
+          <p class="table-option-text">COVERAGE</p>
+        </div>
+      {{/link-to}}
+    {{/click-log}}
   </div>
 
   <div class="table-wrapper">
