@@ -9,15 +9,19 @@ body {
   background-color: #f9f9fb;
 }
 
+p {
+  margin: 0;
+}
+
 h1, h2, h3, h4, h5 {
   font-family: "Quantico";
+  margin: 0;
 }
 
 a {
   text-decoration: none;
   color: #0096b9;
 }
-
 
 /// For the nav-bar
 
@@ -104,6 +108,7 @@ nav {
   color: white;
   line-height: 24px;
   font-size: 1.5em;
+  margin-top: 22px;
 }
 
 // For the data display windows, under the nav-bar
@@ -233,14 +238,26 @@ td:first-child {
   border-color: #d2d7dd;
 }
 
+.overview-bullet-wrapper:last-child {
+  border: none;
+}
+
 .data-overview-header {
-  margin: 0;
   line-height: 0px;
   font-size: .7em;
+  margin-bottom: 15px;
+}
+
+.overview-text {
+  padding-right: 15px;
 }
 
 .i-icon {
   height: 11px;
+}
+
+.data-bullets {
+  padding-right: 15px;
 }
 
 .bullet-name {
@@ -259,6 +276,7 @@ td:first-child {
   float: right;
   font-size: .7em;
   padding-right: 5px;
+  color: #5b8491;
 }
 
 .tables-api-bar {
