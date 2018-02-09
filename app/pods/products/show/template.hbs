@@ -10,36 +10,15 @@
 <!-- TODO: Redesign the scroll function to match the mockup -->
 <div class="table-display-window">
 
+  <!-- Renders the product header -->
   {{product-bar product=product}}
 
+  <!-- Renders the bar with display options for the full table -->
   {{table-options-bar}}
 
-  <div class="table-wrapper">
-    <!-- COMPONENT 5 FULL TABLE -->
-    <table class="show-table" WIDTH="100%" CELLPADDING="4" CELLSPACING="0">
-      <!-- Displays the categories -->
-      <tr class="data-row category-row-show">
-        <td class="data-category data-cell-show"></td>
-        {{#each product.categories as |category|}}
-          <td class="data-category data-cell-show">{{category}}</td>
-        {{/each}}
-      </tr>
-      <!-- Displays the rows of data, as collected in route.js -->
-      {{#each product.productData as |product index|}}
-        {{#each product as |row|}}
-          <tr class="data-row">
-            <td class="data-field data-cell-show">{{index}}</td>
-            {{#each row as |rowData|}}
-              <td class="data-field data-cell-show">{{rowData}}</td>
-            {{/each}}
-          </tr>
-        {{/each}}
-      {{/each}}
-    </table>
-  </div>
+  <!-- Renders the full table -->
+  {{full-table product=product}}
 
   <!-- Display's the table's footer text -->
   {{footer-bar text='SAMPLE ROWS'}}
 </div>
-
-{{outlet}}
