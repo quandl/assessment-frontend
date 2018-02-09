@@ -40,19 +40,18 @@
   {{/each}}
 </div>
 
-<!-- TODO: Make this into it's own component-->
+<!-- This displays the overview of the data, on the right-hand side of the screen -->
 <div class="data-overview">
 
-  <!-- COMPONENT 9 GREEN BUTTON -->
   <div class="green-btn">COMMERCIAL DATA</div>
 
-  <!--  -->
   <h5 class="data-overview-header">DATA OVERVIEW</h5>
   <p class="overview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
 
   <!-- TODO: Each one of these can be made from one component
   specify text and dynamic info -->
   <div class="data-bullets">
+
     <div class="overview-bullet-wrapper">
       {{#click-log}}
         {{#link-to test}}
@@ -62,6 +61,7 @@
         {{/link-to}}
       {{/click-log}}
     </div>
+
     <div class="overview-bullet-wrapper">
       {{#click-log}}
         {{#link-to test}}
