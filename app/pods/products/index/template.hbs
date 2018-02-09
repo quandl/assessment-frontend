@@ -5,30 +5,19 @@
       <!-- Displays the hamburger menu icon -->
       {{hamburger-icon}}
 
-      <!-- COMPONENT 3 LEFT NAV -->
+      <!-- Left items on nav bar -->
       <div class="left-nav nav">
-        <!-- COMPONENT 4 CLICK A TAG -->
-        {{#click-log}}
-          <a href="#" class="nav-item">ALTERNATIVE DATA</a>
-        {{/click-log}}
-        {{#click-log}}
-          <a href="#" class="nav-item">CORE FINANCIAL DATA</a>
-        {{/click-log}}
+        {{nav-tab text='ALTERNATIVE DATA'}}
+        {{nav-tab text='CORE FINANCIAL DATA'}}
       </div>
 
       <img src='assets/quandl-logo.svg' class="logo">
 
-      <!-- COMPONENT 5 RIGHT NAV -->
+      <!-- Right items on nav bar -->
       <div class="right-nav nav">
-        {{#click-log}}
-          <a href="#" class="nav-item">DOCS & HELP</a>
-        {{/click-log}}
-        {{#click-log}}
-          <a href="#" class="nav-item">BLOG</a>
-        {{/click-log}}
-        {{#click-log}}
-          <a href="#" class="nav-item">SIGN IN</a>
-        {{/click-log}}
+        {{nav-tab text='DOCS & HELP'}}
+        {{nav-tab text='BLOG'}}
+        {{nav-tab text='SIGN IN'}}
       </div>
     </div>
 
