@@ -1,23 +1,25 @@
 // Style files in the pods folder are automatically loaded in.
 @import 'pod-styles';
-// TODO: First breakpoint at 1020px screen width
 // TODO: Learn how to split css files in ember
-// TODO: Remove margin from all p and h tags
 /// General styling
 body {
   font-family: 'Source Sans Pro';
   background-color: #f9f9fb;
 }
 
+p {
+  margin: 0;
+}
+
 h1, h2, h3, h4, h5 {
   font-family: "Quantico";
+  margin: 0;
 }
 
 a {
   text-decoration: none;
   color: #0096b9;
 }
-
 
 /// For the nav-bar
 
@@ -77,6 +79,16 @@ nav {
   padding: 10px;
 }
 
+.left-nav > .ember-view {
+  display: inline-block;
+  float: left;
+}
+
+.right-nav > .ember-view {
+  display: inline-block;
+  float: right;
+}
+
 .nav-item:hover {
   background-color: #004861;
 }
@@ -95,8 +107,8 @@ nav {
 
 .avatar {
   float: left;
-  height: 45px;
-  margin: 12px;
+  height: 34px;
+  margin: 8px;
 }
 
 .publisher {
@@ -104,6 +116,7 @@ nav {
   color: white;
   line-height: 24px;
   font-size: 1.5em;
+  margin-top: 22px;
 }
 
 // For the data display windows, under the nav-bar
@@ -125,7 +138,7 @@ td:first-child {
   display: inline-block;
   margin-left: 5%;
   background-color: #f5fafd;
-  width: 60%;
+  width: 63%;
   border: solid;
   border-width: .1px;
   border-color: #d2d7dd;
@@ -133,7 +146,6 @@ td:first-child {
 }
 
 .publisher-data-header {
-  margin: 0;
   margin-left: 15px;
   margin-top: 35px;
   color: #9aa9b3;
@@ -161,12 +173,10 @@ td:first-child {
 
 .data-display-header {
   display: inline-block;
-  margin: 0;
 }
 
 .data-display-expand {
   float: right;
-  margin: 0;
   line-height: 23px;
   margin-right: 15px;
 }
@@ -188,7 +198,6 @@ td:first-child {
 .data-footer {
   font-size: .6em;
   font-weight: 500;
-  margin: 0;
   padding: 9px;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -205,15 +214,13 @@ td:first-child {
 .data-overview {
   display: inline-block;
   float: right;
-  width: 28%;
-  margin: 0;
-  padding: 0;
+  width: 25%;
   margin-right: 5%;
   background-color: #ffffff;
   padding-left: 1%;
 }
 
-.tab-btn {
+.green-btn {
   line-height: 70px;
   font-size: .7em;
   padding: 2px;
@@ -233,14 +240,26 @@ td:first-child {
   border-color: #d2d7dd;
 }
 
+.overview-bullet-wrapper:last-child {
+  border: none;
+}
+
 .data-overview-header {
-  margin: 0;
   line-height: 0px;
   font-size: .7em;
+  margin-bottom: 15px;
+}
+
+.overview-text {
+  padding-right: 15px;
 }
 
 .i-icon {
   height: 11px;
+}
+
+.data-bullets {
+  padding-right: 15px;
 }
 
 .bullet-name {
@@ -255,10 +274,10 @@ td:first-child {
   right: 72px;
   padding-top: 14px;
   display: inline-block;
-  margin: 0;
   float: right;
   font-size: .7em;
   padding-right: 5px;
+  color: #5b8491;
 }
 
 .tables-api-bar {
@@ -277,6 +296,7 @@ td:first-child {
 }
 
 .tables-api-info {
+  display: inline-block;
   padding-left: 4px;
   font-size: .8em;
   color: #000;
@@ -292,14 +312,13 @@ td:first-child {
 }
 
 .blue-button-header {
-  margin: 0;
   padding: 5px;
   color: #fff;
 }
 
 // For the products show page header
 .publisher-bar {
-  height: 70px;
+  height: 50px;
   background-color: #004861;
   width: 80%;
   margin-left: 10%;
@@ -308,8 +327,7 @@ td:first-child {
 .arrow {
   display: inline-block;
   float: left;
-  margin: 0;
-  font-size: 2em;
+  font-size: 1em;
   padding-top: 15px;
   padding-left: 8px;
   font-weight: 900;
@@ -317,19 +335,19 @@ td:first-child {
 }
 
 .publisher-show {
-  margin: 0;
-  line-height: 67px;
+  line-height: 10px;
+  font-size: 1em;
 }
 
+// For the show page table
 .table-display-window {
   width: 80%;
   margin-left: 10%;
 }
 
 .table-wrapper {
-  height: 500px;
+  height: 494px;
   overflow: scroll;
-  margin: 0;
 }
 
 .data-cell-show {
@@ -352,16 +370,17 @@ td:first-child {
 .product-name {
   display: inline-block;
   line-height: 30px;
-  margin: 7px;
+  margin: 3px;
   margin-left: 0px;
 }
 
 .button-bar {
+  text-align: right;
   display: inline-block;
   float: right;
   width: 240px;
-  margin: 7px;
-  margin-right: 0px;
+  margin: 3px;
+  margin-right: 10px;
 }
 
 .white-button {
@@ -376,12 +395,7 @@ td:first-child {
   font-size: .7em;
 }
 
-.white-button-header {
-  margin: 0;
-}
-
 .blue-button-show {
-  width: 50%;
   margin: 0;
   width: 120px;
   margin-left: 10px;
@@ -389,6 +403,14 @@ td:first-child {
 
 .blue-button-header-show {
   font-size: .7em;
+}
+
+.button-bar > .ember-view {
+  display: inline-block;
+}
+
+.show-table-options > .ember-view {
+  display: inline-block;
 }
 
 .publisher-data {
@@ -402,14 +424,9 @@ td:first-child {
   color: #62c4db;
 }
 
-.table-option-text {
-  margin: 0;
-}
-
 .table-option {
   display: inline-block;
-  padding: 13px;
-  margin: 0;
+  padding: 10px;
   font-size: .7em;
   color: #a4a5ae;
   border-bottom: solid;

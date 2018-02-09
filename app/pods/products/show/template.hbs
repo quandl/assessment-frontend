@@ -1,4 +1,4 @@
-<!-- TODO: Turn all links into console.logs -->
+<!-- COMPONENT 1 -->
 <div class="publisher-bar">
   {{#link-to 'products'}}
     <p class="arrow">&#60;</p>
@@ -12,25 +12,48 @@
   <div class="publisher-data">
     <h4 class="product-name">{{product.name}}</h4>
     <div class="button-bar">
-      <div class="white-button">
-        <h4 class="white-button-header">COVERAGE</h4>
-      </div>
-      <div class="blue-button blue-button-show">
-        <h4 class="blue-button-header blue-button-header-show">DOWNLOAD <span class="download-arrow">&#9660;</span></h4>
-      </div>
-    </div>
-  </div>
-  
-  <div class="show-table-options">
-    <div class="table-option">
-      <p class="table-option-text">DATA SAMPLE</p>
-    </div>
-    <div class="table-option">
-      <p class="table-option-text">COVERAGE</p>
+      <!-- COMPONENT 2 -->
+      {{#click-log}}
+        {{#link-to test}}
+          <div class="white-button">
+            <h4 class="white-button-header">COVERAGE</h4>
+          </div>
+        {{/link-to}}
+      {{/click-log}}
+
+      <!-- COMPONENT 3 -->
+      {{#click-log}}
+        {{#link-to test}}
+          <div class="blue-button blue-button-show">
+            <h4 class="blue-button-header blue-button-header-show">DOWNLOAD <span class="download-arrow">&#9660;</span></h4>
+          </div>
+        {{/link-to}}
+      {{/click-log}}
     </div>
   </div>
 
+  <div class="show-table-options">
+    <!-- COMPONENT 4 -->
+    {{#click-log}}
+      {{#link-to test}}
+        <div class="table-option">
+          <p class="table-option-text">DATA SAMPLE</p>
+        </div>
+      {{/link-to}}
+    {{/click-log}}
+
+    <!-- COMPONENT 4 -->
+    {{#click-log}}
+      {{#link-to test}}
+        <div class="table-option">
+          <p class="table-option-text">COVERAGE</p>
+        </div>
+      {{/link-to}}
+    {{/click-log}}
+  </div>
+
   <div class="table-wrapper">
+    <!-- COMPONENT 5 FULL TABLE -->
     <table class="show-table" WIDTH="100%" CELLPADDING="4" CELLSPACING="0">
       <!-- Displays the categories -->
       <tr class="data-row category-row-show">
@@ -51,7 +74,10 @@
         {{/each}}
       {{/each}}
     </table>
+
   </div>
+
+  <!-- COMPONENT 6 FOOTER (from index) -->
   <div class="data-display-footer">
     <p class="data-footer">SAMPLE ROWS</p>
   </div>
