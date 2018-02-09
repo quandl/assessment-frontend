@@ -1,3 +1,4 @@
+<!-- TODO: Turn all links into console.logs -->
 <div class="publisher-bar">
   {{#link-to 'products'}}
     <p class="arrow">&#60;</p>
@@ -6,13 +7,29 @@
   {{/link-to}}
 </div>
 
-
 <!-- TODO: Redesign the scroll function to match the mockup -->
 <div class="table-display-window">
-  <h4>{{product.name}}</h4>
-  <div class="">
-
+  <div class="publisher-data">
+    <h4 class="product-name">{{product.name}}</h4>
+    <div class="button-bar">
+      <div class="white-button">
+        <h4 class="white-button-header">COVERAGE</h4>
+      </div>
+      <div class="blue-button blue-button-show">
+        <h4 class="blue-button-header blue-button-header-show">DOWNLOAD <span class="download-arrow">&#9660;</span></h4>
+      </div>
+    </div>
   </div>
+  
+  <div class="show-table-options">
+    <div class="table-option">
+      <p class="table-option-text">DATA SAMPLE</p>
+    </div>
+    <div class="table-option">
+      <p class="table-option-text">COVERAGE</p>
+    </div>
+  </div>
+
   <div class="table-wrapper">
     <table class="show-table" WIDTH="100%" CELLPADDING="4" CELLSPACING="0">
       <!-- Displays the categories -->
@@ -34,6 +51,9 @@
         {{/each}}
       {{/each}}
     </table>
+  </div>
+  <div class="data-display-footer">
+    <p class="data-footer">SAMPLE ROWS</p>
   </div>
 </div>
 
