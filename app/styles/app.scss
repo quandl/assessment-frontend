@@ -2,6 +2,7 @@
 @import 'pod-styles';
 // TODO: First breakpoint at 1020px screen width
 // TODO: Learn how to split css files in ember
+// TODO: Remove margin from all p and h tags
 /// General styling
 body {
   font-family: 'Source Sans Pro';
@@ -125,7 +126,7 @@ td:first-child {
   margin-left: 5%;
   background-color: #f5fafd;
   width: 60%;
-  border-right: solid;
+  border: solid;
   border-width: .1px;
   border-color: #d2d7dd;
   padding-right: 0.9%;
@@ -143,9 +144,10 @@ td:first-child {
   border: solid;
   border-width: .1px;
   border-color: #d2d7dd;
-  margin-top: 15px;
+  margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
+  margin-bottom: 15px;
 }
 
 
@@ -190,6 +192,13 @@ td:first-child {
   padding: 9px;
   padding-top: 4px;
   padding-bottom: 4px;
+  border: solid;
+  border-top: none;
+  border-width: .1px;
+  border-color: #d2d7dd;
+  background-color: #f0f4f8;
+  font-weight: 700;
+  color: #a4a5ae;
 }
 
 // For the right-hand data overview cell
@@ -282,7 +291,7 @@ td:first-child {
   margin-top: 15px;
 }
 
-.pricing-header {
+.blue-button-header {
   margin: 0;
   padding: 5px;
   color: #fff;
@@ -320,12 +329,8 @@ td:first-child {
 .table-wrapper {
   height: 500px;
   overflow: scroll;
+  margin: 0;
 }
-
-// #ember273 {
-//   color: #fff;
-//   font-size: .7em;
-// }
 
 .data-cell-show {
   border: dotted;
@@ -342,4 +347,80 @@ td:first-child {
 
 .show-table {
   table-layout: unset;
+}
+
+.product-name {
+  display: inline-block;
+  line-height: 30px;
+  margin: 7px;
+  margin-left: 0px;
+}
+
+.button-bar {
+  display: inline-block;
+  float: right;
+  width: 240px;
+  margin: 7px;
+  margin-right: 0px;
+}
+
+.white-button {
+  display: inline-block;
+  padding: 5px;
+  border: solid;
+  border-width: .1px;
+  border-color: #0093ba;
+  color: #0093ba;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: .7em;
+}
+
+.white-button-header {
+  margin: 0;
+}
+
+.blue-button-show {
+  width: 50%;
+  margin: 0;
+  width: 120px;
+  margin-left: 10px;
+}
+
+.blue-button-header-show {
+  font-size: .7em;
+}
+
+.publisher-data {
+  margin: 3px;
+  border-bottom: solid;
+  border-width: .1px;
+  border-color: #d2d7dd;
+}
+
+.download-arrow {
+  color: #62c4db;
+}
+
+.table-option-text {
+  margin: 0;
+}
+
+.table-option {
+  display: inline-block;
+  padding: 13px;
+  margin: 0;
+  font-size: .7em;
+  color: #a4a5ae;
+  border-bottom: solid;
+  border-width: 2px;
+  border-color: #fff;
+}
+
+.table-option:hover {
+  font-weight: 700;
+  color: #0096b9;
+  border-bottom: solid;
+  border-width: 2px;
+  border-color: #0096b9;
 }
