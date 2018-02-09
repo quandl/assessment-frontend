@@ -1,0 +1,8 @@
+<!-- Renders the bar showing who the publisher is, and linking back to the index -->
+<div class="publisher-bar">
+  {{#link-to 'products'}}
+    <p class="arrow">&#60;</p>
+    <img src="/assets/avatar.png" alt="" class="avatar-show">
+    <h3 class="publisher publisher-show">{{publisher.title}}</h3>
+  {{/link-to}}
+</div>

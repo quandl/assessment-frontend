@@ -1,13 +1,7 @@
-<!-- COMPONENT 1 -->
-<div class="publisher-bar">
-  {{#link-to 'products'}}
-    <p class="arrow">&#60;</p>
-    <img src="/assets/avatar.png" alt="" class="avatar-show">
-    <h3 class="publisher publisher-show">{{publisher.title}}</h3>
-  {{/link-to}}
-</div>
+<!-- Renders the bar showing who the publisher is, and linking back to the index -->
+{{publisher-bar publisher=publisher}}
 
-<!-- TODO: Redesign the scroll function to match the mockup -->
+<!-- Holds all the displays directly related to the table -->
 <div class="table-display-window">
 
   <!-- Renders the product header -->
