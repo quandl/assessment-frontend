@@ -1,0 +1,13 @@
+<!-- This is the horizontal bar with the product's name, the button for it's coverage, and to download -->
+<div class="product-data">
+  <h4 class="product-name">{{product.name}}</h4>
+  <div class="button-bar">
+    {{#click-log}}
+      <a href='#' class="white-button">COVERAGE</a>
+    {{/click-log}}
+
+    {{#click-log}}
+        <a href='#' class="blue-button download-button">DOWNLOAD <span class="download-arrow">&#9660;</span></a>
+    {{/click-log}}
+  </div>
+</div>

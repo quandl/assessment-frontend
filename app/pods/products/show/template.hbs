@@ -9,20 +9,8 @@
 
 <!-- TODO: Redesign the scroll function to match the mockup -->
 <div class="table-display-window">
-  <div class="publisher-data">
-    <h4 class="product-name">{{product.name}}</h4>
-    <div class="button-bar">
-      <!-- COMPONENT 2 -->
-      {{#click-log}}
-        <a href='#' class="white-button">COVERAGE</a>
-      {{/click-log}}
 
-      <!-- COMPONENT 3 -->
-      {{#click-log}}
-          <a href='#' class="blue-button download-button">DOWNLOAD <span class="download-arrow">&#9660;</span></a>
-      {{/click-log}}
-    </div>
-  </div>
+  {{product-bar product=product}}
 
   <div class="show-table-options">
     <!-- COMPONENT 4 -->
