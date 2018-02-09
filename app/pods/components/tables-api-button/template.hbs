@@ -1,1 +1,9 @@
-{{yield}}
+<!-- Renders the button to link to the table's API -->
+{{#click-log}}
+  {{#link-to test}}
+    <div class="tables-api-bar">
+      <p href="#" class="tables-api-info">{{text}}</p>
+      <img src="/assets/info.png" class="i-icon i-icon-api" alt="">
+    </div>
+  {{/link-to}}
+{{/click-log}}
