@@ -79,16 +79,12 @@ nav {
   padding: 10px;
 }
 
-#ember775 {
-  float: left;
-}
-
-#ember777, #ember778 {
+.left-nav > .ember-view {
   display: inline-block;
   float: left;
 }
 
-#ember779, #ember780, #ember781 {
+.right-nav > .ember-view {
   display: inline-block;
   float: right;
 }
@@ -224,7 +220,7 @@ td:first-child {
   padding-left: 1%;
 }
 
-.tab-btn {
+.green-btn {
   line-height: 70px;
   font-size: .7em;
   padding: 2px;
@@ -342,6 +338,7 @@ td:first-child {
   line-height: 30px;
 }
 
+// For the show page table
 .table-display-window {
   width: 80%;
   margin-left: 10%;
@@ -377,11 +374,12 @@ td:first-child {
 }
 
 .button-bar {
+  text-align: right;
   display: inline-block;
   float: right;
   width: 240px;
   margin: 7px;
-  margin-right: 0px;
+  margin-right: 10px;
 }
 
 .white-button {
@@ -397,7 +395,6 @@ td:first-child {
 }
 
 .blue-button-show {
-  width: 50%;
   margin: 0;
   width: 120px;
   margin-left: 10px;
@@ -407,7 +404,11 @@ td:first-child {
   font-size: .7em;
 }
 
-#ember291, #ember292, #ember293, #ember287, #ember289 {
+.button-bar > .ember-view {
+  display: inline-block;
+}
+
+.show-table-options > .ember-view {
   display: inline-block;
 }
 

@@ -1,7 +1,9 @@
-<!-- TODO: put nav in it's own component -->
+<!-- COMPONENT 1 -->
 <div class="nav-wrapper">
   <nav>
     <div class="links-bar">
+
+      <!-- COMPONENT 2 HAMBURGER -->
       {{#click-log}}
       <!-- Using 'test' in the link to to ensure that, while the link is clickable, it doesn't direct anywhere.
       The error is intentional. -->
@@ -13,8 +15,10 @@
           </div>
         {{/link-to}}
       {{/click-log}}
+
+      <!-- COMPONENT 3 LEFT NAV -->
       <div class="left-nav nav">
-        <!-- TODO: Each of these can be in one component -->
+        <!-- COMPONENT 4 CLICK A TAG -->
         {{#click-log}}
           <a href="#" class="nav-item">ALTERNATIVE DATA</a>
         {{/click-log}}
@@ -22,7 +26,10 @@
           <a href="#" class="nav-item">CORE FINANCIAL DATA</a>
         {{/click-log}}
       </div>
+
       <img src='assets/quandl-logo.svg' class="logo">
+
+      <!-- COMPONENT 5 RIGHT NAV -->
       <div class="right-nav nav">
         {{#click-log}}
           <a href="#" class="nav-item">DOCS & HELP</a>
@@ -35,16 +42,19 @@
         {{/click-log}}
       </div>
     </div>
+
+    <!-- COMPONENT 6 PUBLISHER BAR -->
     <img src="/assets/avatar.png" alt="" class="avatar">
     <h3 class="publisher">{{publisher.title}}</h3>
   </nav>
 </div>
 
-<!-- TODO: Store this in it's own component -->
 <div class="data-display">
   <h5 class="publisher-data-header">Datasets for {{publisher.title}}</h5>
   {{#each products as |product|}}
     <div class="data-display-wrapper">
+
+      <!-- COMPONENT 7 SAMPLE TABLE -->
       <div class="data-display-title">
         <h5 class="data-display-header">{{product.name}}</h5>
         <h5 class="data-display-expand">{{link-to 'EXPAND' 'products.show' product.id}}</h5>
@@ -58,7 +68,6 @@
           {{/each}}
         </tr>
         <!-- Displays the rows of data, as collected in route.js -->
-        <!-- TODO: Find a way to do this with a component method -->
         {{#each product.productDataSubsetEntries as |product|}}
           {{#each product as |row|}}
             <tr class="data-row">
@@ -70,6 +79,7 @@
         {{/each}}
       </table>
 
+      <!-- COMPONENT 8 FOOTER -->
       <div class="data-display-footer">
         <p class="data-footer">SAMPLE ROWS</p>
       </div>
@@ -79,7 +89,11 @@
 
 <!-- TODO: Make this into it's own component-->
 <div class="data-overview">
-  <div class="btn tab-btn">COMMERCIAL DATA</div>
+
+  <!-- COMPONENT 9 GREEN BUTTON -->
+  <div class="green-btn">COMMERCIAL DATA</div>
+
+  <!--  -->
   <h5 class="data-overview-header">DATA OVERVIEW</h5>
   <p class="overview-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
 
