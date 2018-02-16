@@ -1,2 +1,57 @@
 // Style files in the pods folder are automatically loaded in.
 @import 'pod-styles';
+@import './variables';
+
+@import './nav';
+@import './main';
+@import './aside';
+
+@import './main2';
+
+.ember-application {
+  margin: 0;
+  font-family: $font-source;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.primary-button, .input-tables-field > input {
+  margin: 20px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.input-tables-field{
+  position: relative;
+  display: flex;
+  & > input {
+    border-color: $color-bostonblue;
+    // color: $color-lightteal;
+    color: $color-slateblue;
+    padding: 5px;
+    border-style: solid;
+    box-sizing: border-box;
+    font-size: 18px;
+    text-align: left;
+  }
+  & > .input-icon {
+    color: $color-bostonblue;
+    position: absolute;
+    right: 10px;
+    top: 28px;
+  }
+}
+
+.primary-button {
+  background-color: $color-bostonblue;
+  color: $color-white;
+  padding: 10px;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-family: $font-quantico;
+}

@@ -31,7 +31,7 @@ export default Route.extend({
         deliveryFrequency: 'daily',
         dataFrequency: 'weekly',
         reportingLag: '12 hours',
-        history: '2005-11-01',
+        history: 'Nov 2005',
         coverage: '5000+ companies, 59 indicators'
       })
     });

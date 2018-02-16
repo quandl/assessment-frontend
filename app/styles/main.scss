@@ -1,0 +1,82 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  background-color: $color-skyblue;
+
+  .first-nav {
+    display: show;
+  }
+  main {
+    flex: 1;
+
+    td:first-child {
+      padding-left: 50px;
+    }
+  }
+}
+
+.main-title {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-family: $font-quantico;
+  color: $color-mediumgray;
+  padding: 20px 20px 0 20px;
+  font-weight: 200;
+}
+
+.dataset {
+  border: 1px solid $color-lightgray;
+  margin: 20px;
+}
+
+.product-name {
+  font-size: 18px;
+  font-family: $font-quantico;
+  color: $color-deepcyan;
+  background-color: $color-white;
+  margin: 0;
+  padding: 20px 10px;
+  border-bottom: 1px solid $color-lightgray;
+
+  a {
+    float: right;
+    color: $color-bostonblue;
+    text-decoration: none;
+
+    &:visited, &:hover, &:active {
+      border-bottom: 1px solid $color-bostonblue;
+
+    }
+  }
+}
+
+table {
+  border-collapse:collapse;
+  tr {
+    padding-left: 10px;
+  }
+  th {
+    padding: 10px 20px 10px 0;
+    font-weight: 700;
+    font-size: 14px;
+    border-bottom: 1px solid $color-lightgray;
+  }
+  td {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 5px 0;
+    text-align: left;
+    background-color: $color-white;
+    border-bottom: 1px solid $color-lightestgray;
+  }
+  .sample-rows {
+    width: 100%;
+    text-transform: uppercase;
+    color: $color-darkblue;
+    border: none;
+    white-space: nowrap;
+    font-weight: 600;
+    padding: 10px;
+    font-size: 13px;
+  }
+}

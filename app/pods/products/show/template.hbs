@@ -1,17 +1,69 @@
-<h3>Sub-Product Page</h3>
+<nav>
+  {{#link-to 'products'}}
+  <div class="second-nav main-2-second-nav">
+    <i class="fas fa-chevron-left back-icon"></i>
+    <i class="fas fa-chart-bar fa-2x"></i>
+    <h2> Data Publisher </h2>
+  </div>
+  {{/link-to}}
+</nav>
 
-{{link-to 'Product page' 'products'}}
 
-<h4>{{product.name}}</h4>
+<h3 class="product-name">Dataset Name</h3>
+<span class="tabs">
+  <div class="tab tab-active" {{action "tab"}}>Data Sample</div>
+  <div class="tab" {{action "tab"}}>Coverage</div>
+</span>
 
-<table>
-  {{#each productData as |data|}}
-    <tr>
-      <td>{{data.ticker}}</td>
-      <td>{{data.comp_name}}</td>
-      <td>{{data.per_end_date}}</td>
-    </tr>
-  {{/each}}
-</table>
+<div class="container">
+
+
+  <div class="dataset-2">
+
+    <table>
+      <tr>
+        <th></th>
+        <th>m_ticker</th>
+        <th>ticker</th>
+        <th>comp_name</th>
+        <th>comp_name_2</th>
+        <th>exchange</th>
+        <th>currency_code</th>
+        <th>per_end_date</th>
+        <th>per_type</th>
+        <th>per_code</th>
+        <th>per_fisc_year</th>
+        <th>per_fisc_qtr</th>
+        <th>per_cal_year</th>
+        <th>per_cal_qtr</th>
+        <th>rev_type</th>
+        <th>rev_type_desc</th>
+      </tr>
+      {{#each productData as |data index|}}
+        <tr>
+          <td class="data-index">{{index}}</td>
+          <td>{{data.m_ticker}}</td>
+          <td>{{data.ticker}}</td>
+          <td>{{data.comp_name}}</td>
+          <td>{{data.comp_name_2}}</td>
+          <td>{{data.exchange}}</td>
+          <td>{{data.currency_code}}</td>
+          <td>{{data.per_end_date}}</td>
+          <td>{{data.per_type}}</td>
+          <td>{{data.per_code}}</td>
+          <td>{{data.per_fisc_year}}</td>
+          <td>{{data.per_fisc_qtr}}</td>
+          <td>{{data.per_cal_year}}</td>
+          <td>{{data.per_cal_qtr}}</td>
+          <td>{{data.rev_type}}</td>
+          <td>{{data.rev_type_desc}}</td>
+        </tr>
+      {{/each}}
+      <th class="sample-rows" colspan="2">
+        Sample Rows
+      </th>
+    </table>
+  </div>
+</div>
 
 {{outlet}}

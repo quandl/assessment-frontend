@@ -1,17 +1,89 @@
-<h3>Product Page - Index - {{publisher.title}}</h3>
+<!-- <nav>
+  <h3>Product Page - Index - {{publisher.title}}</h3>
 
-{{#each products as |product|}}
-  <h4>{{link-to product.name 'products.show' product.id}}</h4>
+  this is the first page
+</nav> -->
 
-  <table>
-    {{#each product.productDataSubset as |data|}}
-      <tr>
-        <td>{{data.ticker}}</td>
-        <td>{{data.comp_name}}</td>
-        <td>{{data.per_end_date}}</td>
-      </tr>
-    {{/each}}
-  </table>
-{{/each}}
+<!-- Testing logs:-->
+{{log "Look at me!"}}
+
+<nav>
+    <div class="first-nav">
+      <span class="first-nav__left">
+        <div class="menu-button" {{action "menu"}}><i class="fas fa-bars"></i></div>
+        <div class="tab" {{action "tab"}}>Alternative Data</div>
+        <div class="tab tab-active" {{action "tab"}}>Core Financial Data</div>
+      </span>
+      <span class="first-nav__middle" {{action "logo"}}><img src = 'assets/quandl-logo.svg'></span>
+      <span class="first-nav__right">
+        <div class="tab" {{action "tab"}}>Docs & Help</div>
+        <div class="tab" {{action "tab"}}>Blog</div>
+        <div class="tab" {{action "tab"}}>Sign In</div>
+      </span>
+    </div>
+    <div class="second-nav">
+      <i class="fas fa-chart-bar fa-3x"></i>
+      <h2> Data Publisher </h2>
+    </div>
+</nav>
+
+<div class="container">
+  <main>
+      <h2 class="main-title">Datasets in This Data Product</h2>
+      {{#each products as |product|}}
+        <div class="dataset">
+          <h4 class="product-name">{{product.name}} {{link-to "EXPAND" 'products.show' product.id}}</h4>
+          <table>
+            <tr>
+              <th>m_ticker</th>
+              <th>ticker</th>
+              <th>comp_name</th>
+              <th>comp_name_2</th>
+              <th>exchange</th>
+              <th>currency_code</th>
+              <th>per_end_date</th>
+              <th>per_type</th>
+              <th>per_code</th>
+              <th>per_fisc_year</th>
+              <th>per_fisc_qtr</th>
+            </tr>
+            {{#each product.productDataSubset as |data|}}
+              <tr>
+                <td>{{data.m_ticker}}</td>
+                <td>{{data.ticker}}</td>
+                <td>{{data.comp_name}}</td>
+                <td>{{data.comp_name_2}}</td>
+                <td>{{data.exchange}}</td>
+                <td>{{data.currency_code}}</td>
+                <td>{{data.per_end_date}}</td>
+                <td>{{data.per_type}}</td>
+                <td>{{data.per_code}}</td>
+                <td>{{data.per_fisc_year}}</td>
+                <td>{{data.per_fisc_qtr}}</td>
+              </tr>
+            {{/each}}
+            <th class="sample-rows">
+              Sample Rows
+            </th>
+          </table>
+        </div>
+        {{/each}}
+  </main>
+
+  <aside>
+    <button class = "button-title" {{action "commercial"}}>Commercial Data</button>
+    <h5 class="aside-title">Data Overview</h5>
+    <p class="aside-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
+    <table>
+      {{#publisher-info title="Delivery Frequency" value=publisher.deliveryFrequency}}{{/publisher-info}}
+      {{#publisher-info title="Data Frequency" value=publisher.dataFrequency}}{{/publisher-info}}
+      {{#publisher-info title="Reporting Lag" value=publisher.reportingLag}}{{/publisher-info}}
+      {{#publisher-info title="History" value=publisher.history}}{{/publisher-info}}
+      {{#publisher-info title="Coverage" value=publisher.coverage}}{{/publisher-info}}
+    </table>
+    <span class="input-tables-field" >{{input value="Tables API"}} <i class="fas fa-info-circle input-icon"></i></span>
+    <button class="primary-button" {{action "pricing"}}>Pricing</button>
+  </aside>
+</div>
 
 {{outlet}}
