@@ -1,0 +1,9 @@
+{
+  "name": "assessment-frontend",
+  "authors": [
+    "yucun"
+  ],
+  "dependencies": {
+    "canvas-datagrid": "^0.19.8"
+  }
+}

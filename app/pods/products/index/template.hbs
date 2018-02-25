@@ -1,17 +1,97 @@
-<h3>Product Page - Index - {{publisher.title}}</h3>
+<top-bar>
+  <nav class="primary-nav primary-nav--wide">
+    <div class="primary-nav__nav primary-nav__nav--left">
+      <div>
+        <div class="primary-nav__nav-block primary-nav__nav-block--data primary-nav__nav-block--left">
+          <a class="hamburger-menu" {{action 'logClick' 'menu'}}>
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+          </a>
+        </div>
+      </div>
+      <a class="primary-nav__nav-block primary-nav__nav-block--with-outline" {{action 'logClick' 'Alternative Data'}}>Alternative Data</a>
+      <a class="primary-nav__nav-block primary-nav__nav-block--with-outline" {{action 'logClick' 'Core Financial Data'}}>Core Financial Data</a>
+    </div>
+    <div class="primary-nav__nav primary-nav__nav--center">
+      <a class="primary-nav__nav-block primary-nav__nav-block--centered">
+        <img src="assets/quandl-logo.svg" alt="Quandl" class="quandl-logo">
+      </a>
+    </div>
+    <div class="primary-nav__nav primary-nav__nav--right">
+      <a class="primary-nav__nav-block primary-nav__nav-block--right" {{action 'logClick' 'docs & help'}}>docs &amp; help</a>
+      <a class="primary-nav__nav-block primary-nav__nav-block--right" {{action 'logClick' 'blog'}}>blog</a>
+      <a class="primary-nav__nav-block primary-nav__nav-block--right" {{action 'logClick' 'sign in'}}>sign in</a>
+    </div>
+  </nav>
+</top-bar>
 
-{{#each products as |product|}}
-  <h4>{{link-to product.name 'products.show' product.id}}</h4>
-
-  <table>
-    {{#each product.productDataSubset as |data|}}
-      <tr>
-        <td>{{data.ticker}}</td>
-        <td>{{data.comp_name}}</td>
-        <td>{{data.per_end_date}}</td>
-      </tr>
-    {{/each}}
-  </table>
-{{/each}}
-
-{{outlet}}
+<div class="data-product">
+  <div class="data-product__content">
+    <main class="data-product__main">
+      <div class="data-product__info">
+        <p class="product-intro">Datasets in this data product</p>
+        <ul class="product-list">
+          {{#each products as |product|}}
+            <li class="product-list__list-item">
+              <product-card class="product-card">
+                <product-header class="product-card__header">
+                  <a class="product-dataset-name">
+                    <h2 class="product-dataset-header small-header">{{product.name}}</h2>
+                  </a>
+                  <div>
+                    {{link-to 'Expand' 'products.show' product.id class='product-dataset-expand b-button b-button--empty'}}
+                  </div>
+                </product-header>
+                {{product-data data=product.productDataSubset columns=product.columns limit=7}}
+                <product-summary class="product-card__summary">
+                  <div class="product-summary">
+                    <div>Sample Rows</div>
+                  </div>
+                </product-summary>
+              </product-card>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    </main>
+  </div>
+  <div class="data-product__sidebar">
+    <div class="product-sidebar">
+      <div class="product-sidebar__section">
+        <div class="product-data-avail product-data-avail--green">
+          Commercial Data
+        </div>
+        <div class="product-overview">
+          <h2 class="small-header small-header--subtle">Data Overview</h2>
+          <p class="product-overview__description paragraph">Updated daily, the ORATS professional grade database of implied and historical volatility information covers all US equity options.</p>
+        </div>
+        <dl class="product-facts">
+          <div class="product-facts__fact">
+            <dt class="product-facts__label">Delivery Frequency</dt>
+            <dd class="product-facts__data">{{publisher.deliveryFrequency}}</dd>
+          </div>
+          <div class="product-facts__fact">
+            <dt class="product-facts__label">Data Frequency</dt>
+            <dd class="product-facts__data">{{publisher.dataFrequency}}</dd>
+          </div>
+          <div class="product-facts__fact">
+            <dt class="product-facts__label">Reporting Lag</dt>
+            <dd class="product-facts__data">{{publisher.reportingLag}}</dd>
+          </div>
+          <div class="product-facts__fact">
+            <dt class="product-facts__label">History</dt>
+            <dd class="product-facts__data">{{publisher.history}}</dd>
+          </div>
+          <div class="product-facts__fact">
+            <dt class="product-facts__label">Coverage</dt>
+            <dd class="product-facts__data">{{publisher.coverage}}</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="product-sidebar__section">
+        <a class="product-pricing-button b-button--blue b-button--large b-button--full-width" {{action 'logClick' 'pricing'}}>Pricing</a>
+      </div>
+    </div>
+  </div>
+</div>

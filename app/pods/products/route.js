@@ -7,8 +7,14 @@ let Product = EmberObject.extend({
   name: null,
   data: [],
   productDataSubset: Ember.computed('data', function() {
-    return this.get('data').slice(0, 7);
-  })
+    return this.get('data').slice(0, 7).map(row => Object.values(row));
+  }),
+  productData: Ember.computed('data', function() {
+    return this.get('data').map(row => Object.values(row));
+  }),
+  columns: Ember.computed('data', function() {
+    return Object.keys(this.get('data')[0]);
+  }),
 })
 
 export default Route.extend({
@@ -18,18 +24,18 @@ export default Route.extend({
         Product.create({
           id: 'abc',
           name: 'Product ABC',
-          data: sampleData.map(o => EmberObject.create(o))
+          data: sampleData
         }),
         Product.create({
           id: '123',
           name: 'Product 123',
-          data: sampleData.map(o => EmberObject.create(o))
+          data: sampleData
         })
       ],
       publisher: EmberObject.create({
         title: 'XYZ Corp',
-        deliveryFrequency: 'daily',
-        dataFrequency: 'weekly',
+        deliveryFrequency: 'Daily',
+        dataFrequency: 'Weekly',
         reportingLag: '12 hours',
         history: '2005-11-01',
         coverage: '5000+ companies, 59 indicators'

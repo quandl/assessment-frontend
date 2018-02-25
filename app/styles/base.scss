@@ -1,0 +1,104 @@
+body {
+  color: #0d3244;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  cursor: default;
+}
+
+dl, ol, p, ul {
+  line-height: 1.6;
+}
+
+body, div, dl, dt, h1, h2, h3, h4, h5, h6, li, ol, p, td, th, ul {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+.application-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.medium-header {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.small-header {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+
+  &--subtle {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+}
+
+.large-header,
+.medium-header,
+.small-header {
+  font-family: Quantico, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.b-button {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: .6em 1.5em .67em;
+    transition: all .15s linear,visibility 0s;
+    border: 0;
+    border-radius: 1px;
+    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: normal;
+    text-align: center;
+    text-decoration: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-transform: uppercase;
+}
+
+.b-button--full-width {
+    display: block;
+    width: 100%;
+}
+
+.b-button--large {
+    padding-top: .8em;
+    padding-bottom: .8em;
+    font-size: 16px;
+}
+
+.b-button--blue {
+    background-color: #0e99b9;
+    color: #fff;
+}
+
+.b-button--empty {
+    background-color: transparent;
+    color: #0e99b9;
+}
+
+.paragraph {
+  line-height: 1.4;
+  font-family: Rasa,Georgia,Garamond,serif;
+}

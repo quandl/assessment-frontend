@@ -1,0 +1,131 @@
+.primary-nav,
+top-bar {
+  background-color: #0d3244;
+}
+
+top-bar {
+  display: block;
+  position: relative;
+  z-index: 400;
+
+  a,
+  a:focus,
+  a:hover {
+    color: #0e99b9;
+  }
+}
+
+.primary-nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+
+  &--wide {
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.primary-nav__nav {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+
+  &--left {
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    border-right: 1px solid #085067;
+  }
+
+  &--center {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+
+  &--right {
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+.primary-nav__nav-block {
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &--with-outline {
+    border-right: 1px solid #074a5f;
+  }
+
+  &--left {
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-right: 1px solid #085067;
+  }
+
+  &--centered {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 56px;
+    padding: 0;
+  }
+
+  &--right {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 56px;
+    padding: 0 20px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+.hamburger-menu {
+  display: block;
+  position: relative;
+  width: 1.5em;
+  height: 1em;
+  margin: auto;
+  font-size: 16px;
+
+  .line {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 1.5em;
+    height: 2px;
+    transition: all 0.2s;
+    background: #fff;
+  }
+
+  .line.line-1 {
+    top: 0;
+  }
+
+  .line.line-2 {
+    top: 50%;
+  }
+
+  .line.line-3 {
+    top: 100%;
+  }
+}

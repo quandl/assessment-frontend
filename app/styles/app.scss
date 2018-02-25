@@ -1,2 +1,11 @@
 // Style files in the pods folder are automatically loaded in.
-@import 'pod-styles';
+@import "pod-styles";
+
+@import "base";
+@import "products/index";
+@import "products/show";
+@import "products/product";
+@import "component/product-data";
+
+@import url(https://fonts.googleapis.com/css?family=Quantico);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);

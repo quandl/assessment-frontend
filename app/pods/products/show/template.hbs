@@ -1,17 +1,37 @@
-<h3>Sub-Product Page</h3>
+<div class="product-dataset__banner">
+  <div class="product-publisher">
+    {{#link-to 'products'}}
+      <img src="https://d360wc4uc6n3i9.cloudfront.net/assets/images/product/dataset/back-button-605787664ed1ccc9c476b29f48e5e05b.svg" alt="Back to SEP" class="product-publisher__back-button">
+    {{/link-to}}
+    <div class="product-publisher__image-container">
+      <img src="/assets/avatar.png" alt="Data Publisher" class="product-publisher__image">
+    </div>
+    <div class="product-publisher__name">
+      <h1 class="medium-header">{{publisher.title}}</h1>
+    </div>
+  </div>
+</div>
 
-{{link-to 'Product page' 'products'}}
-
-<h4>{{product.name}}</h4>
-
-<table>
-  {{#each productData as |data|}}
-    <tr>
-      <td>{{data.ticker}}</td>
-      <td>{{data.comp_name}}</td>
-      <td>{{data.per_end_date}}</td>
-    </tr>
-  {{/each}}
-</table>
-
-{{outlet}}
+<div class="data-product">
+  <div class="data-product__content">
+    <header class="data-product__header">
+      <div class="product-name">
+        <div class="product-name__information">
+          <h1 class="product-name__product-name medium-header medium-header--emphasis">{{product.name}}</h1>
+        </div>
+      </div>
+      <div class="product-operation">
+        <a class="product-operation-button--empty b-button--medium b-button--full-width">Coverage</a>
+        <a class="product-operation-button b-button--medium b-button--full-width">Download</a>
+      </div>
+    </header>
+    <product-card class="product-card">
+      {{product-data data=product.productData columns=product.columns limit=30}}
+      <product-summary class="product-card__summary">
+        <div class="product-summary">
+          <div>Sample Rows</div>
+        </div>
+      </product-summary>
+    </product-card>
+  </div>
+</div>
