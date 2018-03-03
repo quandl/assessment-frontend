@@ -23,16 +23,18 @@ a.logo {
 }
 
 img {
+	max-height: 100%;
+	display: inline-block;
 	vertical-align: middle;
-	max-height: 54px;
-	max-width: 104px;
 }
 
 h1 {
-	line-height: 90px;
+	margin-left: 10px;
+	line-height: 45px;
 	margin: 0;
 	letter-spacing: 1px;
 	font-size: 2.1em;
+	box-sizing: border-box;
 }
 
 .link-l, .link-r {
@@ -51,18 +53,20 @@ h1 {
 }
 
 .nav-bar {
-	background: #0d3244;
-	width: 100%;
-	height: 56px;
-	text-transform: uppercase;
-	vertical-align: middle;
-	display: inline-block;
-	letter-spacing: 0.01em;
+ background: #0d3244;
+ width: 100%;
+ height: 56px;
+ text-transform: uppercase;
+ vertical-align: middle;
+ display: inline-block;
+ letter-spacing: .5px;
+ white-space: nowrap;
+ min-width: 700px;
 }
 
 	.nav-bar-l {
-		height: 56px;
-		float: left;
+	 height: 56px;
+	 float: left;
 	}
 
 		#wrapper {
@@ -90,15 +94,16 @@ h1 {
 		}
 
 	.nav-bar-m {
-		width: 104px;
-		height: 100%;
-		margin: 0 auto;
+	 width: 104px;
+	 height: 100%;
+	 margin: 0 auto;
 	}
 
 	.nav-bar-r {
-		float: right;
-		width: auto;
-		margin-right: 10px;
+	 float: right;
+	 margin-right: 10px;
+	 margin-left: 0;
+	 white-space: nowrap;
 	}
 
 	.selected {
@@ -106,19 +111,74 @@ h1 {
 	}
 
 .section-bar {
-	background: #074a5f;
-	color: #fff;
-	width: 100%;
-	height: 90px;
-	vertical-align: middle;
-	display: inline-block;
+ background: #074a5f;
+ color: #fff;
+ width: 100%;
+ padding: 18px;
+ height: 90px;
+ line-height: 55px;
+ vertical-align: middle;
+ display: inline-block;
+ box-sizing: border-box;
 }
+
+	#section-title {
+		font-size: 30px;
+		font-weight: 700;
+		padding: 15px;
+		letter-spacing: 1px;
+		box-sizing: border-box;
+	}
 
 	#avatar {
 		float: left;
-		padding-left: 19px;
-		padding-right: 13px;
-		line-height: 90px;
+	}
+
+.pub-bar {
+ background: #074a5f;
+ color: #fff;
+ width: 100%;
+ height: 60px;
+ vertical-align: middle;
+ display: inline-block;
+}
+	
+	.back-block {
+		height: 60px;
+		width: 40px;
+		float: left;
+		display: inline-block;
+	}
+
+	.nav-back {
+		height: 60px;
+		line-height: 40px;
+		padding: 10px;
+		display:inline-block;
+		box-sizing: border-box;
+		vertical-align: middle;
+		float: left;
+	}
+
+	#pub-title {
+		margin-left: 10px;
+		font-size: 16px;
+		letter-spacing: 0.5px;
+	}
+
+	.dataset-name {
+		width: 100%;
+		height: 60px;
+		line-height: 60px;
+		background: #fff;
+		font-weight: 700;
+		text-align: right;
+	}
+
+	#dataset-name {
+		float: left;
+		padding: 0 20px;
+		font-size: 20px;
 	}
 
 .data-body {
@@ -130,10 +190,12 @@ h1 {
 	.dataset-box {
 		width: calc(100% - 405px);
 		height: 101%;
+		min-width: 640px;
 		float: left;
-		padding: 15px 20px;
+		padding: 13px 20px;
 		display: inline-block;
 		box-sizing: border-box;
+		overflow: auto;
 	}
 
 		h4#dataset-desc {
@@ -146,32 +208,36 @@ h1 {
 		}
 
 		#dataset-wrapper {
-			margin-top: 25px;
+			margin-top: 17px;
+			margin-bottom: 25px;
 			-webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.25);
  	 	 		 -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.25);
 							box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.25);
 		}
 
-		#dataset-title {
-			width: 100%;
-			padding: 20px 10px;
-			background: #fff;
-			font-size: large;
-			font-weight: 700;
-			padding-left: 15px;
-			box-sizing: border-box;
-		}
+			#dataset-title {
+				width: 100%;
+				padding: 18px 10px;
+				background: #fff;
+				font-size: large;
+				font-weight: 700;
+				padding-left: 15px;
+				box-sizing: border-box;
+				/*white-space: nowrap;*/
+			}
 
-		.exp {
-			float: right;
-			margin-right: 20px;
-			text-transform: uppercase;
-			color: #0e99b9;
-		}
+			.exp {
+				float: right;
+				margin-right: 20px;
+				text-transform: uppercase;
+				color: #0e99b9;
+			}
 
-		#data {
-			border-top: 1px solid rgba(0,0,0,0.15);
-		}
+			#data {
+				border-top: 1px solid rgba(0,0,0,0.15);
+
+				overflow: scroll;
+			}
 
 	.overview-box {
 		width: 405px;
@@ -197,7 +263,7 @@ h1 {
 			display: inline-block;
 		}
 
-		h4#overview {
+		h4#overview-title {
 			font-size: 14px;
 			font-weight: 700;
 			text-transform: uppercase;
@@ -242,31 +308,92 @@ h1 {
 			border-top: 1px solid rgba(0,0,0,0.07);
 		}
 
-		.tables-api {
-			font-size: large;
-			padding: 4px 10px;
-			margin-top: 40px;
-			border: 1px solid #0099CC;
-			border-radius: 1px;
-			-webkit-box-shadow: 0px 0px .5px 0px rgba(57,183,205,.5);
-		 	 	 -moz-box-shadow: 0px 0px .5px 0px rgba(57,183,205,.5);
-							box-shadow: 0px 0px .5px 0px rgba(57,183,205,.5);
-		}
-
-		.pricing {
-			margin-top: 30px;
-			padding: 7px 0;
-			background: #0e99b9;
-			border: 1px solid #0e99b9;
-			border-radius: 1px;
-			text-align: center;
-			text-transform: uppercase;
-			font-size: 15px;
-			font-weight: 700;
-			letter-spacing: .5px;
-		}
-
-		.section-bar, h4, .details, .pricing, #dataset-title {
+		.section-bar, #section-title, .pub-bar, #pub-title, h4, .details, .b-pricing, #dataset-title, .dataset-name {
 			font-family: "Quantico", Verdana, Helvetica, sans-serif;
 		}
 
+/*ICON CONTENT*/
+
+/*Buttons*/
+.b-tables-api, .b-cov {
+	border: 1px solid #0099CC;
+	border-radius: 1px;
+	-webkit-box-shadow: 0px 0px .5px 0px rgba(57,183,205,.5);
+ 	 	 -moz-box-shadow: 0px 0px .5px 0px rgba(57,183,205,.5);
+					box-shadow: 0px 0px .5px 0px rgba(57,183,205,.5);
+}
+
+#b-tables-api {
+	color: #005f60;
+	font-size: large;
+	padding: 4px 10px;
+	margin-top: 40px;
+}
+
+.b-pricing, .b-down {
+	background: #0e99b9;
+	border: 1px solid #0e99b9;
+	border-radius: 1px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: .5px;
+}
+
+#b-pricing {
+	padding: 7px 0;
+	margin-top: 30px;
+}
+
+#b-cov, #b-down {
+	height: 20px;
+	line-height: 20px;
+	display: inline-block;
+	text-transform: uppercase;
+}
+
+#b-cov {
+	color: #0099CC;
+	font-size: 15px;
+	padding: 5px 18px;
+}
+
+#b-down {
+	color: #fff;
+	height: 20px;
+	line-height: 20px;
+	margin-left: 10px;
+	margin-right: 20px;
+	padding: 5px 15px;
+}
+
+#down-tri {
+	color:rgba(255,255,255,.5); 
+	font-size: 9px;
+	vertical-align: middle;
+}
+
+/*Less-than arrow*/
+.arrow {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 9px 11px 9px 0;
+    border-color: transparent #fff transparent transparent;
+    position: absolute;
+    left: 20px;
+    top: 21px;
+}
+
+.arrow:after{
+    content:'';
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 9px 11px 9px 0;
+    border-color: transparent #074a5f transparent transparent;
+    position: absolute;
+    left: 5px;
+    top: -9px;    
+}
