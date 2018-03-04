@@ -352,7 +352,7 @@ h1 {
 
 	.overview-box {
 		width: 405px;
-		height: calc(100vh - 146px);
+		height: 100vh;
 		background: #fff;
 		color: inherit;
 		float: right;
