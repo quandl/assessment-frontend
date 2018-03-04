@@ -1,17 +1,102 @@
-<h3>Sub-Product Page</h3>
+<!DOCTYPE html>
 
-{{link-to 'Product page' 'products'}}
+<head>
+	<title>
+		Quandl - Data Publisher
+	</title>
+	<link rel="stylesheet" type="text/css" href="/Quandl Mockup/app/styles/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/jquery-3.2.1.min.js">
+</head>
 
-<h4>{{product.name}}</h4>
+	<!-- NAVIGATION BAR -->
+	<div class="header">
+		<div class="pub-bar">
+			{{#link-to 'products'}}
+				<div class="back-block">
+					<span class="arrow"></span>
+				</div>
+				<div class="nav-back">
+					<img src="../assets/avatar.png" id="avatar">
+					<span id="pub-title">{{publisher.title}}</span>
+				</div>
+			{{/link-to}}
+		</div>
 
-<table>
-  {{#each productData as |data|}}
-    <tr>
-      <td>{{data.ticker}}</td>
-      <td>{{data.comp_name}}</td>
-      <td>{{data.per_end_date}}</td>
-    </tr>
-  {{/each}}
-</table>
+		<!-- HEADER BAR -->
+		<div class="dataset-name">
+			<span id="dataset-name">{{product.name}}</span>
+			<a href="javascript:void(0)" class="coverage b-cov" id="b-cov">Coverage</a>
+			<a href="javascript:void(0)" class="b-down download" id="b-down">Download &nbsp;&nbsp;<span id="down-tri">&#x25BC;</span></a>
+		</div>
 
-{{outlet}}
+		<!-- TAB BAR -->
+		<div class="tab-bar">
+			<a href="javascript:void(0)">
+				<div class="tab tab-selected">
+					Data Sample
+				</div>
+				<div class="tab">
+					Coverage
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<!-- ACTUAL DATA -->
+	<div class="data" id="data">
+		<div class="dataset-body">
+			<table>
+				<tr>
+					<th class="actual-header"></th>
+          <th class="actual-header">m_ticker</th>
+          <th class="actual-header">ticker</th>
+          <th class="actual-header">comp_name</th>
+          <th class="actual-header">comp_name_2</th>
+          <th class="actual-header">exchange</th>
+          <th class="actual-header">currency_code</th>
+          <th class="actual-header">per_end_date</th>
+          <th class="actual-header">per_type</th>
+          <th class="actual-header">per_code</th>
+          <th class="actual-header">per_fisc_year</th>
+          <th class="actual-header">per_fisc_qtr</th>
+          <th class="actual-header">per_cal_year</th>
+          <th class="actual-header">per_cal_qtr</th>
+          <th class="actual-header">rev_type</th>
+          <th class="actual-header">rev_type_desc</th>
+          <th class="actual-header">broker_name</th>
+          <th class="actual-header">analyst_name</th>
+          <th class="actual-header">eps_rev_date</th>
+          <th class="actual-header">eps_rev_est</th>
+          <th class="actual-header">eps_rev_date_prev</th>
+          <th class="actual-header">eps_rev_est_prev</th>
+        </tr>
+        {{#each productData as |data|}}
+	        <tr>
+	        	<td class="actual-data"></td>
+	          <td class="actual-data">{{data.m_ticker}}</td>
+	          <td class="actual-data">{{data.ticker}}</td>
+	          <td class="actual-data">{{data.comp_name}}</td>
+	          <td class="actual-data">{{data.comp_name_2}}</td>
+	          <td class="actual-data">{{data.exchange}}</td>
+	          <td class="actual-data">{{data.currency_code}}</td>
+	          <td class="actual-data">{{data.per_end_date}}</td>
+	          <td class="actual-data">{{data.per_type}}</td>
+	          <td class="actual-data">{{data.per_code}}</td>
+	          <td class="actual-data">{{data.per_fisc_year}}</td>
+	          <td class="actual-data">{{data.per_fisc_qtr}}</td>
+	          <td class="actual-data">{{data.per_cal_year}}</td>
+	          <td class="actual-data">{{data.per_cal_qtr}}</td>
+	          <td class="actual-data">{{data.rev_type}}</td>
+	          <td class="actual-data">{{data.rev_type_desc}}</td>
+	          <td class="actual-data">{{data.broker_name}}</td>
+	          <td class="actual-data">{{data.analyst_name}}</td>
+	          <td class="actual-data">{{data.eps_rev_date}}</td>
+	          <td class="actual-data">{{data.eps_rev_est}}</td>
+	          <td class="actual-data">{{data.eps_rev_date_prev}}</td>
+	          <td class="actual-data">{{data.eps_rev_est_prev}}</td>
+	        </tr>
+        {{/each}}
+			</table>
+		</div>
+	</div>
+	<script type="text/javascript" src="../assets/quandl.js"></script>
