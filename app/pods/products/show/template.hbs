@@ -25,7 +25,7 @@
 		<!-- HEADER BAR -->
 		<div class="dataset-name">
 			<span id="dataset-name">{{product.name}}</span>
-			<a href="javascript:void(0)" class="coverage b-cov" id="b-cov">Coverage</a>
+			<a href="javascript:void(0)" class="b-cov" id="b-cov">Coverage</a>
 			<a href="javascript:void(0)" class="b-down download" id="b-down">Download &nbsp;&nbsp;<span id="down-tri">&#x25BC;</span></a>
 		</div>
 
@@ -47,7 +47,7 @@
 		<div class="dataset-body">
 			<table>
 				<tr>
-					<th class="actual-header"></th>
+					<th class="actual-header first-col"></th>
           <th class="actual-header">m_ticker</th>
           <th class="actual-header">ticker</th>
           <th class="actual-header">comp_name</th>
@@ -72,14 +72,14 @@
         </tr>
         {{#each productData as |data|}}
 	        <tr>
-	        	<td class="actual-data"></td>
+	        	<td class="actual-data first-col"></td>
 	          <td class="actual-data">{{data.m_ticker}}</td>
 	          <td class="actual-data">{{data.ticker}}</td>
 	          <td class="actual-data">{{data.comp_name}}</td>
 	          <td class="actual-data">{{data.comp_name_2}}</td>
 	          <td class="actual-data">{{data.exchange}}</td>
 	          <td class="actual-data">{{data.currency_code}}</td>
-	          <td class="actual-data">{{data.per_end_date}}</td>
+	          <td class="actual-data per-end-date">{{data.per_end_date}}</td>
 	          <td class="actual-data">{{data.per_type}}</td>
 	          <td class="actual-data">{{data.per_code}}</td>
 	          <td class="actual-data">{{data.per_fisc_year}}</td>
@@ -90,13 +90,16 @@
 	          <td class="actual-data">{{data.rev_type_desc}}</td>
 	          <td class="actual-data">{{data.broker_name}}</td>
 	          <td class="actual-data">{{data.analyst_name}}</td>
-	          <td class="actual-data">{{data.eps_rev_date}}</td>
+	          <td class="actual-data eps-rev-date">{{data.eps_rev_date}}</td>
 	          <td class="actual-data">{{data.eps_rev_est}}</td>
-	          <td class="actual-data">{{data.eps_rev_date_prev}}</td>
+	          <td class="actual-data eps-rev-date-prev">{{data.eps_rev_date_prev}}</td>
 	          <td class="actual-data">{{data.eps_rev_est_prev}}</td>
 	        </tr>
         {{/each}}
 			</table>
 		</div>
+	</div>
+	<div class="actual-data-bot">
+		Sample Rows
 	</div>
 	<script type="text/javascript" src="../assets/quandl.js"></script>
