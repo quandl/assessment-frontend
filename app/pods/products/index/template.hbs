@@ -94,7 +94,7 @@
                 <td class="sample-data">{{data.comp_name_2}}</td>
                 <td class="sample-data">{{data.exchange}}</td>
                 <td class="sample-data">{{data.currency_code}}</td>
-                <td class="sample-data">{{data.per_end_date}}</td>
+                <td class="sample-data per-end-date">{{data.per_end_date}}</td>
                 <td class="sample-data">{{data.per_type}}</td>
                 <td class="sample-data">{{data.per_code}}</td>
                 <td class="sample-data">{{data.per_fisc_year}}</td>
@@ -105,9 +105,9 @@
                 <td class="sample-data">{{data.rev_type_desc}}</td>
                 <td class="sample-data">{{data.broker_name}}</td>
                 <td class="sample-data">{{data.analyst_name}}</td>
-                <td class="sample-data">{{data.eps_rev_date}}</td>
+                <td class="sample-data eps-rev-date">{{data.eps_rev_date}}</td>
                 <td class="sample-data">{{data.eps_rev_est}}</td>
-                <td class="sample-data">{{data.eps_rev_date_prev}}</td>
+                <td class="sample-data eps-rev-date-prev">{{data.eps_rev_date_prev}}</td>
                 <td class="sample-data">{{data.eps_rev_est_prev}}</td>
               </tr>
             {{/each}}
@@ -131,7 +131,7 @@
       <div class="stats">
         <div>
           DELIVERY FREQUENCY
-          <a href="javascript:void(0)" class="info-icon">i</a>
+          <a href="javascript:void(0)" class="info-icon" title="Some info">i</a>
           <span class="del-freq details">{{publisher.deliveryFrequency}}</span>
         </div>
       </div>
@@ -139,7 +139,7 @@
       <div class="stats">
         <div>
           DATA FREQUENCY
-          <a href="javascript:void(0)" class="info-icon">i</a>
+          <a href="javascript:void(0)" class="info-icon" title="Some info">i</a>
           <span class="data-freq details">{{publisher.dataFrequency}}</span>
         </div>
       </div>
@@ -147,7 +147,7 @@
       <div class="stats">
         <div>
           REPORTING LAG
-          <a href="javascript:void(0)" class="info-icon">i</a>
+          <a href="javascript:void(0)" class="info-icon" title="Some info">i</a>
           <span class="rep-lag details">{{publisher.reportingLag}}</span>
         </div>
       </div>
@@ -155,15 +155,15 @@
       <div class="stats">
         <div>
           HISTORY
-          <a href="javascript:void(0)" class="info-icon">i</a>
-          <span class="history details">{{publisher.history}}</span>
+          <a href="javascript:void(0)" class="info-icon" title="Some info">i</a>
+          <span class="hist details">{{publisher.history}}</span>
         </div>
       </div>
       <div class="divider"></div>
       <div class="stats">
         <div>
           COVERAGE
-          <a href="javascript:void(0)" class="info-icon">i</a>
+          <a href="javascript:void(0)" class="info-icon" title="Some info">i</a>
           <span class="details">
             <span class="coverage">{{publisher.coverage}}</span>
           </span>
@@ -172,7 +172,7 @@
       <div class="b-tables-api" id="b-tables-api">
         Tables API
         <span class="details">
-          <a href="javascript:void(0)" class="info-icon">i</a>
+          <a href="javascript:void(0)" class="info-icon" title="Some info">i</a>
         </span>
       </div>
       <a href="javascript:void(0)">
