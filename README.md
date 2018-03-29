@@ -16,7 +16,7 @@ https://invis.io/NQEVR3K5T
 
 Other things to note:
 
-* You can build off the skeleton application. It has the sample data and some examples of how to display it. 
+* You can build off the skeleton application. It has the sample data and some examples of how to display it.
 * You will need to learn a little about how ember works, see the further reading links below
 * Fonts to be used in the design:
   * https://fonts.google.com/specimen/Quantico

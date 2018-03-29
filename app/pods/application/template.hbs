@@ -1,5 +1,24 @@
-<h1>General Layout</h1>
+{{#if isIndexRoute}}
+  <header class="header">
+    <ul class="header header--nav">
+      <li><a href="#" {{action 'toggleMenu'}}>Home</a></li>
+      <li><a href="#">Product</a></li>
+    </ul>
+    <a><img src='assets/quandl-logo.svg'></a>
+    <ul class="header header--nav">
+      <li><a href="#">Docs</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Sign In</a></li>
+    </ul>
+  </header>
+{{else}}
+  <header class="header">
+    <ul class="header header--nav">
+      <li>{{link-to 'Data Publisher' 'products'}}</li>
+    </ul>
+  </header>
+{{/if}}
 
-<img src='assets/quandl-logo.svg'>
-
-{{outlet}}
+<div>
+  {{outlet}}
+</div>

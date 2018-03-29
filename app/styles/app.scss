@@ -1,2 +1,32 @@
 // Style files in the pods folder are automatically loaded in.
 @import 'pod-styles';
+@import "./base";
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $title-font-family;
+  background-color: $dark-blue;
+  color: $main-white;
+
+  &--nav {
+    list-style: none;
+    padding-left: 0;
+    text-transform: uppercase;
+    a {
+      display: inline-block;
+      padding: 0 0.6rem;
+      font-weight: 400;
+      font-size: 0.8rem;
+      color: $main-white;
+      text-decoration: none;
+    }
+  }
+
+
+}
