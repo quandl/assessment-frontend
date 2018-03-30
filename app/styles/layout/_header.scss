@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $dark-blue;
+  color: $main-white;
+  height: 4rem;
+
+  a {
+    font-weight: 400;
+    color: $main-white;
+    text-decoration: none;
+  }
+
+  .icon {
+    margin: 0 0.8rem;
+  }
+
+  &--nav {
+    list-style: none;
+    padding-left: 0;
+    text-transform: uppercase;
+    a {
+      display: inline-block;
+      padding: 0 0.6rem;
+      font-weight: 400;
+      font-size: 0.8rem;
+    }
+  }
+
+  &__alignleft {
+    justify-content: left;
+  }
+
+  &__blue {
+    background-color: $dark-blue-hover;
+  }
+}

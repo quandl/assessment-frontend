@@ -1,2 +1,90 @@
 // Style files in the pods folder are automatically loaded in.
 @import 'pod-styles';
+@import "./base/base";
+@import "./layout/header";
+
+img {
+  max-width: 100%;
+}
+
+h1,h2,h3,h4 {
+  font-family: $title-font-family;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: $base-font-weight;
+  line-height: $base-line-height;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  background-size: cover;
+
+  &--avatar {
+    background-image: url('../assets/avatar.png');
+  }
+}
+
+.index-page {
+  background-color: $light-blue;
+  // display: flex;
+
+  &--main {
+    // flex: 3;
+    margin: 2rem;
+    width: 70%;
+    background-color: yellow;
+  }
+
+  &--side {
+    // flex: 1;
+    background-color: white;
+    width: 20%;
+  }
+
+  &--title {
+    color: $light-grey;
+    font-size: 1rem;
+    font-weight: $light;
+    text-transform: uppercase;
+  }
+
+  table {
+    border: 1px solid $light-grey;
+    background-color: white;
+    margin: 2rem 0;
+    max-width: 100%;
+    overflow: hidden;
+
+    tr {
+      max-width: 500px;
+      background-color: red;
+      overflow: hidden;
+    }
+
+    caption {
+      font-family: $title-font-family;
+      background-color: white;
+      margin: 0;
+      border: 1px solid $light-grey;
+      border-bottom: none;
+      padding: 1rem 1.4rem;
+      h3 {
+        color: $dark-blue-hover;
+        float: left;
+      }
+      a {
+        color: $main-blue;
+        font-weight: $bold;
+        text-decoration: none;
+        float: right;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
