@@ -10,3 +10,4 @@ test('it exists', function(assert) {
   let adapter = this.subject();
   assert.ok(adapter);
 });
+
