@@ -1,7 +1,7 @@
-<h3>Product Page - Index - {{publisher.title}}</h3>
+<h3>Product Page - Index - {{@publisher.title}}</h3>
 
 {{#each products as |product|}}
-  <h4>{{link-to product.name 'products.show' product.id}}</h4>
+  <h4><LinkTo @route="products.show" @model={{product.id}}>{{product.name}}</LinkTo></h4>
 
   <table>
     {{#each product.productDataSubset as |data|}}
