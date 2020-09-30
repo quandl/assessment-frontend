@@ -1,6 +1,7 @@
-import Ember from 'ember';
+import Controller from '@ember/controller';
+import { alias } from '@ember/object/computed';
 
-export default Ember.Controller.extend({
-  publisher: Ember.computed.alias('model.publisher'),
-  products: Ember.computed.alias('model.products')
+export default Controller.extend({
+  publisher: alias('model.publisher'),
+  products: alias('model.products')
 });
