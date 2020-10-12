@@ -1,17 +1,89 @@
-<h3>Sub-Product Page</h3>
-
-{{link-to 'Product page' 'products'}}
-
-<h4>{{product.name}}</h4>
-
-<table>
-  {{#each productData as |data|}}
-    <tr>
-      <td>{{data.ticker}}</td>
-      <td>{{data.comp_name}}</td>
-      <td>{{data.per_end_date}}</td>
-    </tr>
-  {{/each}}
-</table>
-
+<div class="product-publisher">
+  <div class="header">
+    <div class="header__icon">
+      {{#link-to 'products'}}
+      <i class="fa fa-chevron-left" aria-hidden="true"></i>
+      {{/link-to}}
+    </div>
+    <div class="header__image">
+      <img src="/assets/avatar.png" alt="Data Publisher">
+    </div>
+    <div class="header__name">
+      <h1 class="name">Data Publisher</h1>
+    </div>
+  </div>
+</div>
+<div class="produc-publisher-content">
+  <div class="subheader">
+    <div class="left-section subheader-block">
+        <div class="title app-font">{{product.name}}</div>
+    </div>
+    <div class="right-section subheader-block">
+        <a class="subheader-block__button coverage app-font" {{action 'logClick' 'Coverage'}}>Coverage</a>
+        <a class="subheader-block__button download app-font" {{action 'logClick' 'Download'}}>Download</a>
+      </div>
+  </div>
+  <div class="subheader">
+    <div class="left-section subheader-block">
+        <a class="data-sample" {{action 'logClick' 'Data Sample'}}>Data Sample</a>
+        <a class="coverage-1" {{action 'logClick' 'Coverage'}}>Coverage</a>
+    </div>
+  </div>
+  <div class="table-detail">
+      <table class="table table-striped table-bordered table-sm" cellspacing="0" width="100%" margin-bottom="0px">
+    <thead>
+      <tr>
+        <th scope="col">m_ticker</th>
+        <th scope="col">ticker</th>
+        <th scope="col">comp_name</th>
+        <th scope="col">comp_name_2</th>
+        <th scope="col">exchange</th>
+        <th scope="col">currency_code</th>
+        <th scope="col">per_end_date</th>
+        <th scope="col">per_type</th>
+        <th scope="col">per_code</th>
+        <th scope="col">per_fisc_year</th>
+        <th scope="col">per_fisc_qtr</th>
+        <th scope="col">per_cal_year</th>
+        <th scope="col">per_cal_qtr</th>
+        <th scope="col">rev_type</th>
+        <th scope="col">rev_type_desc</th>
+        <th scope="col">EPS</th>
+        <th scope="col">broker_name</th>
+        <th scope="col">analyst_name</th>
+        <th scope="col">eps_rev_date</th>
+        <th scope="col">eps_rev_est</th>
+        <th scope="col">eps_rev_date_prev</th>
+        <th scope="col">eps_rev_est_prev</th>
+      </tr>
+    </thead>
+    {{#each productData as |data|}}
+      <tr>
+          <td>{{data.m_ticker}}</td>
+          <td>{{data.ticker}}</td>
+          <td>{{data.comp_name}}</td>
+          <td>{{data.comp_name_2}}</td>
+          <td>{{data.exchange}}</td>
+          <td>{{data.currency_code}}</td>
+          <td>{{data.per_end_date}}</td>
+          <td>{{data.per_type}}</td>
+          <td>{{data.per_code}}</td>
+          <td>{{data.per_fisc_year}}</td>
+          <td>{{data.per_fisc_qtr}}</td>
+          <td>{{data.per_cal_year}}</td>
+          <td>{{data.per_cal_qtr}}</td>
+          <td>{{data.rev_type}}</td>
+          <td>{{data.rev_type_desc}}</td>
+          <td>{{data.EPS}}</td>
+          <td>{{data.broker_name}}</td>
+          <td>{{data.analyst_name}}</td>
+          <td>{{data.eps_rev_date}}</td>
+          <td>{{data.eps_rev_est}}</td>
+          <td>{{data.eps_rev_date_prev}}</td>
+          <td>{{data.eps_rev_est_prev}}</td>
+      </tr>
+    {{/each}}
+  </table>
+  </div>
+</div>
 {{outlet}}

@@ -1,0 +1,312 @@
+// Nav
+.navigation {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: $app-color-black;
+  .left-section {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+  .center-section {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .right-section {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+.icon-nav {
+  display: -ms-flexbox;
+  display: flex;
+  &__icon {
+    color: $app-color-white;
+    font-weight: 600;
+    font-size: 40px;
+    border-right: 1px solid $app-color-dark;
+    padding-top: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  &__nav {
+    color: $app-color-white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 20px;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .active {
+    background-color: $app-color-dark;
+  }
+}
+
+.logo-login {
+  	display: -ms-flexbox;
+    display: flex;
+    padding: 20px;
+    color: $app-color-white;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+	  text-transform: uppercase;
+  &__logo {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 56px;
+    font-size: 50px;
+    padding: 0;
+  }
+  &__login {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 56px;
+    padding: 0 20px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+// Data Publisher
+.data-publisher {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 150px;
+  background-color: $app-color-dark;
+  box-shadow: inset 0 -1px 0 0 #e4e9ee;
+  .info {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 20px 20px 20px 30px;
+  }
+  .large-header {
+    font-family: Quantico,Helvetica,Arial,sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #fff;
+  }
+  .image {
+    width: 80px;
+    height: 80px;
+    margin-right: 12px;
+    padding: 4px;
+    border-radius: 3px;
+  }
+}
+
+// Product
+.product {
+  display: flex;
+}
+
+.product-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: calc(100% - 360px);
+  background-color: #f4f7fa;;
+}
+
+.product-detail {
+  -ms-flex: auto;
+  flex: auto;
+  padding: 24px 30px;
+  width: 100%;
+  .dataset-summary {
+    margin-bottom: 20px;
+    color: rgba(13,50,68,.5);
+    font-size: 20px;
+  }
+}
+
+// Table
+.product-table {
+  margin-bottom: 20px;
+  list-style-type: none;
+}
+.table-item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border: 1px solid #d0d8df;
+  background: #fff;
+  box-shadow: 0 1px 3px 0 rgba(13,50,68,.1);
+  .item-head {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 60px;
+    padding: 8px 16px;
+    .small-header {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -.5px;
+      color: $app-color-black
+    }
+    .product-name {
+      display: inline-block;
+      margin: 0;
+      color: $app-color-black
+    }
+    .expand {
+      display: block;
+      -ms-flex: 1;
+      flex: 1;
+      margin-left: 20px;
+      box-shadow: none;
+      font-weight: 600;
+      text-align: right;
+      a:visited{color: $app-color-blue;text-decoration:none;}
+      a:hover{text-decoration:none;}
+    }
+  }
+  .table {
+    overflow-x:auto;
+    margin-bottom: 0px;
+  }
+  .sample-rows {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 60px;
+    padding: 0px 16px;
+  }
+}
+
+// Side Bar
+.sidebar-wrapper {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex: 0 0 360px;
+	flex: 0 0 360px;
+	transition: width 1s;
+  }
+  .sidebar {
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #fff;
+
+    &__section {
+        padding: 20px;
+    }
+}
+
+.data-overview {
+  margin: 20px 0px;
+  .overview-detail {
+    line-height: 1.4;
+    font-family: Rasa,Georgia,Garamond,serif;
+  }
+}
+
+.data-info {
+    .info-item {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 7px 0 8px;
+        border-bottom: 1px solid $app-color-light;
+    }
+    .info-item-last {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding: 7px 0 8px;
+  }
+    .info-key {
+        color: rgba(13, 50, 68, 0.5);
+        font-size: 13px;
+        font-family: Quantico,Helvetica,Arial,sans-serif;
+        text-transform: uppercase;
+    }
+    .info-value {
+        font-size: 13px;
+        font-weight: 600;
+        text-align: right;
+        font-family: Quantico,Helvetica,Arial,sans-serif;
+    }
+    .info-button{
+      color: $app-color-blue;
+    }
+}
+
+.table-api {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 9px;
+  background: white;
+  border: 2px solid $app-color-blue;
+  font-size: 18px;
+  margin-top: 10px;
+  .info-button{
+    color: $app-color-blue;
+  }
+  &__font {
+    display: block;
+    padding: 0 10px;
+  }
+}
+
+.price {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 9px;
+  background: $app-color-blue;
+  font-size: 18px;
+  &__font {
+    margin-left: 33%;
+    color:white;
+    text-align: center;
+  }
+}
+

@@ -1,0 +1,36 @@
+$app-color-black: #0d3244;
+$app-color-dark: #085067;
+$app-color-blue: #0e99b9;
+$app-color-light: #edf1f5;
+$app-color-white: #fff;
+
+body, div, h1, h2, h3, h4, h5, h6, li, p, td {
+    margin: 0;
+    padding: 0;
+}
+
+.p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.app-font {
+  font-family: Quantico,Helvetica,Arial,sans-serif;
+  text-transform: uppercase;
+}
+.app-color-light{
+  background-color: $app-color-light;
+}
+.application-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
+}

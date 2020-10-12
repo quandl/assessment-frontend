@@ -1,0 +1,39 @@
+<div class="sidebar">
+    <div class="sidebar__section">
+        <button type="button" class="btn btn-outline-success app-font" {{action 'clickButton' 'Commercial Data'}}>Commercial Data</button>
+        <div class="data-overview">
+            <div class="app-font">Data Overview</div>
+            <p class="overview-detail">Updated daily, the ORATS professional grade database of implied and historical volatility information covers all US equity options.</p>
+        </div>
+        <table class="data-info">
+            <div class="info-item">
+                <td class="info-key">Delivery Frequency  <i class="fa fa-info-circle info-button" aria-hidden="true"></i></td>
+                <td class="info-value">{{publisher.deliveryFrequency}}</td>
+            </div>
+            <div class="info-item">
+                <td class="info-key">Data Frequency  <i class="fa fa-info-circle info-button" aria-hidden="true"></i></td>
+                <td class="info-value">{{publisher.dataFrequency}}</td>
+            </div>
+            <div class="info-item">
+                <td class="info-key">Reporting Lag  <i class="fa fa-info-circle info-button" aria-hidden="true"></i></td>
+                <td class="info-value">{{publisher.reportingLag}}</td>
+            </div>
+            <div class="info-item">
+                <td class="info-key">History  <i class="fa fa-info-circle info-button" aria-hidden="true"></i></td>
+                <td class="info-value">{{publisher.history}}</td>
+            </div>
+            <div class="info-item-last">
+                <td class="info-key">Coverage  <i class="fa fa-info-circle info-button" aria-hidden="true"></i></td>
+                <td class="info-value">{{publisher.coverage}}</td>
+            </div>
+        </table>
+        <div class="table-api">
+            <div class="table-api__font">Tables API<i class="fa fa-info-circle info-button" aria-hidden="true"></i></div>
+        </div>
+    </div>
+    <div class="sidebar__section">
+        <div class="price">
+            <a class="price__font app-font" {{action 'clickButton' 'Price'}}>Pricing</a>
+        </div>
+    </div>
+</div>

@@ -1,17 +1,21 @@
-<h3>Product Page - Index - {{@publisher.title}}</h3>
-
-{{#each products as |product|}}
-  <h4><LinkTo @route="products.show" @model={{product.id}}>{{product.name}}</LinkTo></h4>
-
-  <table>
-    {{#each product.productDataSubset as |data|}}
-      <tr>
-        <td>{{data.ticker}}</td>
-        <td>{{data.comp_name}}</td>
-        <td>{{data.per_end_date}}</td>
-      </tr>
-    {{/each}}
-  </table>
-{{/each}}
-
-{{outlet}}
+<div class="application-wrapper">
+	{{!-- NAVIGATION --}}
+	{{navigation}}
+	{{!-- DATA PUBLISHER --}}
+	{{data-publisher publisher=publisher}}
+	{{!-- PRODUCT --}}
+	<div class="product">
+		<div class="product-wrapper">
+			<div class="product-detail">
+				<p class="dataset-summary app-font">Datasets in this data product</p>
+			{{!-- Data Table --}}
+			{{#each products as |product|}}
+				{{product-table product=product}}
+			{{/each}}
+			</div>
+		</div>
+		<div class="sidebar-wrapper">
+			{{sidebar publisher=publisher}}
+		</div>
+	</div>
+</div>

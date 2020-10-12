@@ -1,0 +1,19 @@
+<div class="navigation">
+    <div class="left-section icon-nav">
+        <a class="icon-nav__icon navbar-icon" {{action 'clickButton' 'icon'}}>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
+        <a class="icon-nav__nav {{if focusedAlternativeData 'active'}}" {{action 'clickAlternativeData' 'Alternative Data'}}>Alternative Data</a>
+        <a class="icon-nav__nav {{if focusedFinancialData 'active'}}" {{action 'clickFinancialData' 'Core Financial Data'}}>Core Financial Data</a>
+    </div>
+    <div class="center-section logo-login">
+        <a class="logo-login__logo">
+            <img src="assets/quandl-logo.svg" alt="Quandl" class="quandl-logo">
+        </a>
+    </div>
+    <div class="right-section logo-login">
+        <a class="logo-login__login" {{action 'clickButton' 'docs & help'}}>docs &amp; help</a>
+        <a class="logo-login__login" {{action 'clickButton' 'blog'}}>blog</a>
+        <a class="logo-login__login" {{action 'clickButton' 'sign in'}}>sign in</a>
+    </div>
+</div>

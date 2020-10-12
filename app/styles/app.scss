@@ -1,2 +1,10 @@
 // Style files in the pods folder are automatically loaded in.
 @import 'pod-styles';
+
+@import "index";
+@import "product";
+@import "show";
+@import url(https://fonts.googleapis.com/css?family=Quantico);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import "ember-bootstrap/bootstrap";
